@@ -43,7 +43,7 @@
     @include media-breakpoint-up(lg) {
         .navbar-nav .menu-item.show > .nav-link {
             background: $white;
-            color: $body-color;
+            color: $dark;
         }
 
         .navbar-nav .nav-link {
@@ -92,6 +92,6 @@
 
 .home .hero-nav-overlay {
     .navbar-nav .nav-link {
-        color: $body-color;
+        color: $dark;
     }
 }

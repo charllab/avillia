@@ -30,35 +30,46 @@ get_header(); ?>
                     </div><!-- col -->
 
                     <div class="col-lg-5">
-                        <div class="pt-3 pb-2 px-2 bg-light">
-                            <h2>Contact Information</h2>
-                            <?php
-                            $removethese = array("(", " ", ")", "-");
-                            ?>
+                        <div class="p-2 px-2 bg-secondary">
+                            <h2 class="h3 font-pop text-white mb-150">Get in Touch</h2>
+                            <p class="small text-white" style="max-width: 655px;">
+                                <?php the_field('footer', 'options'); ?>
+                            </p>
                             <table>
                                 <tr>
-                                    <td><strong>Phone: </strong></td>
-                                    <td>
-                                        <a href="tel:+1<?php echo strip_tel(get_field('primary_number', 'option')); ?>"><?php echo get_field('primary_number', 'option'); ?></a>
+                                    <td class="align-text-top">
+                                        <p class="small text-white">Address: </p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="pr-1"><strong>Toll Free: </strong></td>
-                                    <td>
-                                        <a href="tel:+1<?php echo strip_tel(get_field('secondary_number', 'option')); ?>"><?php echo get_field('secondary_number', 'option'); ?></a>
+                                    <td class="align-text-top">
+                                        <p class="small text-white"><?php the_field('address', 'options'); ?></p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>E-mail: </strong></td>
-                                    <td>
-                                        <a href="mailto:<?php echo get_field('primary_email', 'option'); ?>"><?php echo get_field('primary_email', 'option'); ?></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Address: </strong></td>
-                                    <td><?php echo get_field('physical_address', 'option'); ?></td>
                                 </tr>
                             </table>
+                            <p class="small text-white">
+                                Phone: <a class="text-white"
+                                          href="tel:+1<?php echo strip_tel(get_field('phone', 'options')); ?>">+1 <?php the_field('phone', 'options'); ?></a>
+                            </p>
+                            <p class="small text-white">
+                                Email: <a class="text-white"
+                                          href="mailto:<?php the_field('email', 'options') ?>"
+                                          target="_blank"><?php the_field('email', 'options') ?></a>
+                            </p>
+                            <p class="small text-white mb-50">
+                                Fax: <a class="text-white"
+                                        href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>">+1 <?php the_field('fax', 'options'); ?></a>
+                            </p>
+
+                            <div class="social-links">
+                                <?php while( have_rows('social_links', 'options') ): the_row(); ?>
+                                    <a class="social-link btn btn-link text-white px-0 mr-50" target="_blank" href="<?php the_sub_field('url'); ?>">
+                                        <i class="<?php the_sub_field('icon_class'); ?> fa-lg">
+                                            <span class="sr-only"><?php the_sub_field('label'); ?></span>
+                                        </i>
+                                    </a>
+                                <?php endwhile; ?>
+                            </div>
+
+                        </div>
                         </div><!-- bg-light -->
 
                         <div class="px-0">

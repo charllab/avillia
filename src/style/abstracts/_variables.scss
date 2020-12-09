@@ -5,10 +5,11 @@
 $enable-print-styles: false;
 
 // Colors
-$primary: #333;
-$secondary: #999;
+$primary: #442B50;
+$secondary: #247A74;
+$dark: #3E3E3E;
 
-$body-color: #555;
+$body-color: #606060;
 $headings-color: $primary;
 $input-focus-border-color: $primary;
 
@@ -23,7 +24,7 @@ $grid-breakpoints: (
     lg: 991.5px,
     xl: 1199.5px,
     xxl: 1439.5px,
-    xxxl: 1680px
+    xxxl: 1700px
 );
 
 $container-max-widths: (

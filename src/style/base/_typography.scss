@@ -21,7 +21,8 @@ body {
 }
 
 .small, small {
-    font-size: 90%;
+    font-size: 0.9375rem;
+    line-height: 1.66;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -29,6 +30,7 @@ body {
     font-family: adobe-garamond-pro, serif;
     font-weight: 600;
     line-height: 1.2;
+    letter-spacing: .75px;
 }
 
 h1, .h1 {
@@ -100,3 +102,5 @@ p {
 .list-unstyled {
     margin-bottom: 1rem;
 }
+
+p:empty { display:none; }

@@ -1,0 +1,270 @@
+
+.ghostkit-button {
+    @extend .btn;
+    @extend .btn-primary;
+    margin-bottom: $spacer;
+}
+
+.ghostkit-ping-pong__image {
+    max-width: none;
+    padding: 0;
+    min-height: 320px;
+    min-height: 100vw;
+
+    @include media-breakpoint-up(md) {
+        min-height: 592px;
+    }
+}
+
+// set margin-left as needed for pingpongs
+
+.ghostkit-grid-inner {
+
+    @include media-breakpoint-up(lg) {
+
+        .ghostkit-col-content {
+            margin-left: auto !important;
+        }
+
+    }
+
+}
+
+.ghostkit-ping-pong__gallery + .ghostkit-ping-pong__content {
+
+    .ghostkit-col-content {
+        margin-left: 0 !important;
+    }
+
+}
+
+.ghostkit-ping-pong__image + .ghostkit-ping-pong__content {
+
+    .ghostkit-col-content {
+        margin-left: 0 !important;
+    }
+
+}
+
+.ghostkit-ping-pong__content + .ghostkit-ping-pong__gallery {
+
+    .ghostkit-col-content {
+        margin-left: 0 !important;
+    }
+
+}
+
+.ghostkit-ping-pong__content {
+    padding-left: $spacer;
+    padding-right: $spacer;
+    //min-height: 500px;
+    padding-top: $spacer*2;
+    padding-bottom: $spacer*2;
+
+    .ghostkit-col-content {
+        margin-left: 0;
+        @extend .layout--pingpong--maxwidth;
+    }
+
+    .ghostkit-button-wrapper {
+        margin-bottom: 0;
+    }
+
+    // set content order on mobile to always be below
+    @include media-breakpoint-down(md) {
+        order: 2;
+    }
+
+}
+
+
+
+// custom ghost-kit template pingpong + + + + + + + + + + + + + +
+
+.layout--pingpong--maxwidth {
+
+    @include media-breakpoint-up(xl) {
+        max-width: 730px;
+    }
+
+}
+
+
+// override ghost-kit col for ipad
+
+@include media-breakpoint-down(md) {
+
+    .ghostkit-col-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+
+// custom ghost-kit template page divider + + + + + + + + + + + +
+
+.page-divider {
+    padding-top: $spacer*1.5;
+    padding-bottom: $spacer*1.5;
+    background: white url('../images/decrotive.png') no-repeat center 86%;
+    background-size: contain;
+    h3 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 2px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 2rem;
+        }
+
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: $spacer*3;
+        padding-bottom: $spacer*3;
+    }
+
+    .page-divider__text {
+        margin-bottom: 0;
+        text-transform: lowercase !important;
+    }
+}
+
+// custom ghost-kit template testimonial slider + + + + + + + + +
+
+// slider background
+.testimonial-slider {
+    padding-top: $spacer*5;
+    padding-bottom: $spacer*4;
+    margin-bottom: 0;
+    background: $primary url('../images/logo-pattern-teal.png') repeat 0 0;
+    color: white;
+
+
+    // testimonial quote icon
+    .ghostkit-testimonial-icon {
+        display: none;
+    }
+
+    // testimonial general bullet styling
+    .swiper-pagination-bullet {
+        border: 1px solid white;
+    }
+
+    // bullet positioning
+    .ghostkit-carousel-bullets {
+        bottom: $spacer*4;
+
+        // bullet general styling
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border: 1px solid white;
+            transform: none;
+            opacity: 1;
+        }
+
+        // bullet active styling
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+    }
+
+    // slide outer wrapper
+    .testimonial-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        // slide content styling
+        .ghostkit-testimonial-content {
+            max-width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+
+            background: transparent;
+            padding: 0;
+            margin-bottom: $spacer/2;
+            line-height: 1.2;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        // slide inner wrapper
+        .ghostkit-testimonial {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            max-width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        // testimonial source
+        .ghostkit-testimonial-source {
+            display: none;
+        }
+    }
+}
+
+// faq styling
+
+.ghostkit-accordion-item {
+    border-bottom: 1px solid lighten($primary,42%);
+
+
+    // svg arrow styling
+
+    svg.ghostkit-svg-icon {
+        display: inline-block;
+        width: $spacer;
+        height: $spacer;
+        overflow: visible;
+        font-size: inherit;
+        vertical-align: -.125em;
+        background-color: lighten($primary,50%);
+        border-radius: 50%;
+        padding-left: 1px;
+        border: 1px solid lighten($primary,45%);
+        fill: red;
+    }
+
+
+    .ghostkit-accordion-item-heading {
+        margin-bottom: 0;
+    }
+
+    a {
+        @extend h3;
+
+        &:hover {
+            text-decoration: none;
+            background-color: lighten($primary,50%);
+        }
+    }
+
+    a, .ghostkit-accordion-item-content {
+        padding-left: $spacer/2;
+    }
+
+    .ghostkit-accordion-item-content {
+        font-size: .9rem;
+        line-height: 1.6;
+    }
+}
+
+// pingpong gallery
+
+.ghostkit-ping-pong__gallery {
+    .columns-2 {
+        li.blocks-gallery-item:nth-last-of-type(-n+2) {
+            margin-bottom: 0;
+        }
+    }
+}
