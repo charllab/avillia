@@ -1,4 +1,4 @@
-<header id="header" class="hero-nav-overlay bg-dark">
+<header id="header" class="hero-nav-overlay">
     <a href="" target="_blank" class="btn btn-light rounded-0 mb-4 d-block d-lg-none">
         Call To Action
     </a>

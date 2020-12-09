@@ -10,12 +10,6 @@ html {
     }
 }
 
-@include media-breakpoint-up(xxl) {
-    html {
-        font-size: 18px;
-    }
-}
-
 // Global
 
 body {
@@ -23,7 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: $font-family-base;
     -webkit-overflow-scrolling: touch;
-    line-height: 1.4;
+    line-height: 1.625;
 }
 
 .small, small {
@@ -31,7 +25,52 @@ body {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1, .h1 {
+    font-size: 3.125rem;
+    line-height: 1.2;
+}
+
+h2, .h2 {
+    font-size: 2.5rem;
+}
+
+h3, .h3 {
+    font-size: 1.875rem;
+    line-height: 1.33;
+}
+
+h4, .h4 {
+    font-size: 1.375rem;
+    line-height: 1.45;
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: $spacer;
+}
+
+.italic-header {
+    font-family: $headings-font-family;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.font-pop {
+    font-family: $font-family-sans-serif;
+    font-weight: 500;
 }
 
 .spaced-list {
