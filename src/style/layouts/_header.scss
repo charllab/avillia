@@ -1,4 +1,13 @@
+
 .hero-nav-overlay {
+
+    // nav general font-size
+    .navbar-nav .nav-link {
+        font-size: 1.125rem;
+        line-height: 1.2;
+    }
+
+
     padding: 2rem 0;
     @include gradY(rgba($black, .4), 0%, transparent, 100%);
 
@@ -23,8 +32,8 @@
     }
 
     .navbar-nav .nav-link {
-        color: $white;
-        font-weight: bold;
+        color: white;
+        font-weight: 500;
     }
 
     .dropdown-toggle::after {
@@ -76,5 +85,13 @@
             margin: 0;
             padding: 0 0 0 1.5rem;
         }
+    }
+}
+
+// nav .home color specific
+
+.home .hero-nav-overlay {
+    .navbar-nav .nav-link {
+        color: $body-color;
     }
 }
