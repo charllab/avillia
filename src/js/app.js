@@ -1,7 +1,22 @@
 jQuery(function () {
 
-    // Auto target _blank external links
-    targetBlankExternalLinks();
+
+    // make parent active
+    jQuery('li.nav-item.active').parents('li.nav-item').addClass('drop-down-active');
+
+
+    // BIG Slide
+    var menuLink = jQuery('.menu-link').bigSlide({
+        side: 'right',
+        menuWidth: '16rem',
+        easyClose: true,
+        afterOpen: function() {
+            jQuery( 'body' ).toggleClass('noscroll');
+        },
+        afterClose: function() {
+            jQuery( 'body' ).toggleClass('noscroll');
+        }
+    });
 
     // Remove WP Block element iframe classes
     if (jQuery('.wp-block-embed-youtube').length) {

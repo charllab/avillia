@@ -9,6 +9,7 @@ button {
     font-weight: 500;
     border: none;
     height: 50px;
+    line-height: 48px;
 
     // nitpicking
     padding: 1px $spacer*1.15 0;
@@ -18,4 +19,35 @@ button {
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.btn-light {
+    color: $secondary;
+}
+
+.btn-outline-light {
+    border: 1px solid white;
+}
+@include media-breakpoint-down (md) {
+    .btn {
+        display: block;
+    }
+    .btn + .btn {
+        margin-top: $spacer*.75;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .btn + .btn {
+        margin-left: $spacer*.5;
+    }
+
+}
+
+a.btn.btn-light + a.btn.btn-light {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+
 }
