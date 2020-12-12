@@ -39,7 +39,7 @@ body {
 }
 
 h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     line-height: 1.2;
 
     // iphone 5
@@ -47,7 +47,7 @@ h1, .h1 {
         font-size: 1.75rem;
     }
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         font-size: 3.125rem;
     }
 }
@@ -77,9 +77,6 @@ h4, .h4 {
 
 h5, .h5 {
     font-size: 1.25rem;
-
-    // iphone 5
-    @media (max-width: 340px) {}
 }
 
 h6, .h6 {

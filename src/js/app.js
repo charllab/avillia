@@ -1,14 +1,24 @@
 jQuery(function () {
 
+    // equal height cards
+
+    var maxHeight = -1;
+
+    jQuery('.ghostkit-icon-box-content').each(function() {
+        maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
+    });
+
+    jQuery('.ghostkit-icon-box-content').each(function() {
+        jQuery(this).height(maxHeight);
+    });
 
     // make parent active
     jQuery('li.nav-item.active').parents('li.nav-item').addClass('drop-down-active');
 
-
     // BIG Slide
     var menuLink = jQuery('.menu-link').bigSlide({
         side: 'right',
-        menuWidth: '16rem',
+        menuWidth: '16.5rem',
         easyClose: true,
         afterOpen: function() {
             jQuery( 'body' ).toggleClass('noscroll');

@@ -78,7 +78,6 @@
 }
 
 
-
 // custom ghost-kit template pingpong + + + + + + + + + + + + + +
 
 .layout--pingpong--maxwidth {
@@ -102,7 +101,6 @@
 }
 
 
-
 // custom ghost-kit template page divider + + + + + + + + + + + +
 
 .page-divider {
@@ -110,6 +108,7 @@
     padding-bottom: $spacer*1.5;
     background: white url('../images/decrotive.png') no-repeat center 86%;
     background-size: contain;
+
     h3 {
         font-family: forma-djr-display, sans-serif;
         font-weight: 400;
@@ -190,6 +189,7 @@
             padding: 0;
             margin-bottom: $spacer/2;
             line-height: 1.2;
+
             p {
                 margin: 0;
                 padding: 0;
@@ -216,7 +216,7 @@
 // faq styling
 
 .ghostkit-accordion-item {
-    border-bottom: 1px solid lighten($primary,42%);
+    border-bottom: 1px solid lighten($primary, 42%);
 
 
     // svg arrow styling
@@ -228,10 +228,10 @@
         overflow: visible;
         font-size: inherit;
         vertical-align: -.125em;
-        background-color: lighten($primary,50%);
+        background-color: lighten($primary, 50%);
         border-radius: 50%;
         padding-left: 1px;
-        border: 1px solid lighten($primary,45%);
+        border: 1px solid lighten($primary, 45%);
         fill: red;
     }
 
@@ -245,7 +245,7 @@
 
         &:hover {
             text-decoration: none;
-            background-color: lighten($primary,50%);
+            background-color: lighten($primary, 50%);
         }
     }
 
@@ -266,5 +266,202 @@
         li.blocks-gallery-item:nth-last-of-type(-n+2) {
             margin-bottom: 0;
         }
+    }
+}
+
+// full button
+
+.gk-button--full {
+    display: flex;
+    border-radius: 0;
+    font-size: 1.2rem;
+    line-height: $spacer;
+    height: $spacer*3.4;
+    width: 100%;
+    margin-bottom: $spacer;
+
+    @media (max-width: 340px) {
+        font-size: 1.15rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.875rem;
+        height: $spacer*6.8;
+    }
+}
+
+// 3up card stack
+
+.gk-card-stack__grid {
+
+    margin-bottom: $spacer*1.5;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spacer*2.5;
+    }
+
+    .ghostkit-col {
+
+        margin-top: 0;
+
+        @include media-breakpoint-down(md) {
+
+            margin-top: $spacer;
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    .ghostkit-grid-inner {
+        margin-top: 0;
+    }
+
+    @include media-breakpoint-between(md, xl) {
+        .ghostkit-grid-inner {
+            margin-left: -32px;
+        }
+        .ghostkit-col {
+            margin-left: 32px;
+            display: block;
+        }
+    }
+
+    .gk-card-stack__col {
+        &:nth-of-type(2) {
+            box-shadow: 0px 3px 6px #00000029;
+        }
+
+        @include media-breakpoint-down(lg) {
+
+            box-shadow: 0px 3px 6px #00000029;
+
+        }
+    }
+
+    .gk-card-stack__col {
+
+        padding: $spacer;
+
+        @include media-breakpoint-up(xl) {
+            padding: $spacer/2 $spacer*1.5 $spacer*1.5;
+        }
+
+        .has-text-color {
+            min-height: 102px;
+        }
+
+        .gk-card-stack__readmore {
+            color: $primary;
+            margin-bottom: 0;
+            margin-top: auto;
+        }
+
+    }
+
+}
+
+
+// 5 icon cards
+
+.gk-icon-card-grid {
+
+    padding-bottom: $spacer;
+
+    .ghostkit-grid-inner {
+        margin-top: 0;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .ghostkit-col-2 {
+        max-width: 100%;
+        flex-grow: 1;
+
+        @include media-breakpoint-up(md) {
+            max-width: 212px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 242px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 312px;
+        }
+
+    }
+
+    .ghostkit-icon-box-icon {
+        display: none;
+    }
+
+    .ghostkit-icon-box-content {
+        padding-top: 0;
+    }
+
+    .gk-icon-card-col {
+        text-align: center;
+        margin: 0 10px;
+        width: auto;
+
+        .ghostkit-icon-box {
+            padding: $spacer/2;
+            border-radius: 0;
+            border: transparent;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white !important;
+            margin-bottom: $spacer*.15;
+        }
+
+
+        &:nth-of-type(5n+1) {
+            .ghostkit-icon-box {
+                background-color: #247A74;
+            }
+        }
+
+        &:nth-of-type(5n+2) {
+            .ghostkit-icon-box {
+                background-color: #A0703E;
+            }
+        }
+
+        &:nth-of-type(5n+3) {
+            .ghostkit-icon-box {
+                background-color: #553211;
+            }
+        }
+
+        &:nth-of-type(5n+4) {
+            .ghostkit-icon-box {
+                background-color: #254725;
+            }
+        }
+
+        &:nth-of-type(5n+5) {
+            .ghostkit-icon-box {
+                background-color: #302040;
+            }
+        }
+    }
+
+    .gk-icon-card-icon img {
+        padding: 0;
+        width: 135px;
+        height: 135px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent !important;
+        box-shadow: none;
     }
 }

@@ -24,9 +24,9 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: url('../images/pattern.png') no-repeat 0;
+    background: url('../images/pattern-drk.png') no-repeat 0;
     background-size: cover;
-    opacity: .2;
+    opacity: .125;
 }
 
 // tools
@@ -51,4 +51,15 @@
 }
 .bg-dark--rgba {
     background-color: rgba($dark,.9);
+}
+
+.home main {
+    background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
+    background-size: 100%;
+}
+
+.page {
+    background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
+    background-position-y: 310px;
+    background-size: 100%;
 }
