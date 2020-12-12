@@ -58,18 +58,18 @@
     <section class="section bg-dark pt-1 py-xl-1">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 text-center text-xl-left">
+                <div class="col-12 col-xl text-center text-xl-left">
                     <p class="text-white mb-xl-0">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?></p>
                 </div>
-                <div class="col-xl-5 text-center">
+                <div class="col-12 col-xl text-center">
                     <p class="text-white mb-xl-0">
                         <a class="text-white" href="<?php echo esc_url(home_url('/terms-and-conditions')); ?>">
-                            Terms & Conditions</a> &ensp;|&ensp;
+                            Terms &&nbsp;Conditions</a> &ensp;|&ensp;
                         <a class="text-white" href="<?php echo esc_url(home_url('/privacy-policy')); ?>">
-                            Privacy Policy</a>
+                            Privacy&nbsp;Policy</a>
                     </p>
                 </div>
-                <div class="col-xl-4 text-center text-xl-right">
+                <div class="col-12 col-xl text-center text-xl-right">
                     <p class="text-white mb-xl-0">Designed, Developed and Hosted by
                         <a href="https://sproing.ca" target="_blank" class="text-white">Sproing&nbsp;Creative</a>
                     </p>
