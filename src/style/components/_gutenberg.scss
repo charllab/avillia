@@ -11,6 +11,10 @@
     .alignleft {
         margin-right: $spacer*1.85;
 
+        @include media-breakpoint-between(md,lg) {
+            margin-right: $spacer*.75;
+        }
+
         @include media-breakpoint-up(xxl) {
             margin-right: $spacer*3.6;
         }
@@ -27,6 +31,11 @@
     }
 
     .alignright {
+
+        @include media-breakpoint-between(md,lg) {
+            margin-left: $spacer*.75;
+        }
+
         margin-left: $spacer*1.85;
 
         @include media-breakpoint-up(xxl) {
@@ -70,6 +79,14 @@
             background-color: rgba(white,.7);
 
             @include media-breakpoint-up(md) {
+                max-width: 286px;
+                padding: 18px;
+            }
+            @include media-breakpoint-only(md) {
+                margin-top: -12px;
+            }
+
+            @include media-breakpoint-up(lg) {
                 max-width: 386px;
                 padding: 29px;
             }

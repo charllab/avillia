@@ -47,7 +47,7 @@ h1, .h1 {
         font-size: 1.75rem;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         font-size: 3.125rem;
     }
 }

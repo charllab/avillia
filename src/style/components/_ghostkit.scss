@@ -40,7 +40,7 @@
 
 // 3up card stack
 
-.gk-card-stack__grid {
+.gk-3up-card-stack__grid {
 
     margin-bottom: $spacer*1.5;
 
@@ -81,9 +81,10 @@
             box-shadow: 0px 3px 6px #00000029;
         }
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
 
             box-shadow: 0px 3px 6px #00000029;
+            margin-bottom: $spacer;
 
         }
     }
@@ -224,15 +225,94 @@
     .ghostkit-grid-inner {
         width: 100%;
     }
-
-    border: 1px solid brown;
 }
 
 .gk-pingpong__col--img {
 
+    border: 1px solid thistle;
+
     .gk-pingpong__img {
-        border: 1px solid pink;
         margin-bottom: 0;
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 3;
+            background: transparent;
+        }
+
+        &:before {
+            position: absolute;
+            content: ' ';
+            width: 238px;
+            height: 215px;
+            background: transparent url('../images/teal-scribble.svg') no-repeat 0;
+            background-size: cover;
+            z-index: 2;
+            top: -$spacer*.35;
+            left: -$spacer;
+
+            @media (min-width: 340px) {
+                width: 198px;
+                height: 175px;
+                top: -$spacer*.35;
+                left: -$spacer*1.35;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: 158px;
+                height: 135px;
+                top: $spacer*.35;
+                left: -$spacer*1.75;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 138px;
+                height: 115px;
+                top: $spacer;
+                left: -$spacer*1.5;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 238px;
+                height: 215px;
+                top: $spacer*2.3;
+                left: -$spacer*2.3;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: ' ';
+            width: 186px;
+            height: 170px;
+            background: transparent url('../images/purple-scribble.svg') no-repeat 0;
+            background-size: cover;
+            z-index: 2;
+            display: none;
+
+            @media (min-width: 340px) {
+                width: 146px;
+                height: 130px;
+                display: block;
+                bottom: -$spacer*1.46;
+                right: -$spacer*1.46;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: 146px;
+                height: 130px;
+                bottom: -$spacer*1.45;
+                right: -$spacer*1;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 186px;
+                height: 170px;
+                bottom: -4px;
+                right: -$spacer*1.46;
+            }
+        }
     }
 
 }
@@ -240,17 +320,31 @@
 .page .gk-pingpong__col--img img {
     max-width: 100%;
     box-shadow: none;
-    padding: $spacer*4 0;
+    padding: $spacer 0 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(md) {
+        padding: $spacer*2 0 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: $spacer*4 0 $spacer;
+    }
 }
 
 .gk-pingpong__col--text {
     padding-top: $spacer;
     padding-bottom: $spacer;
 
+    @include media-breakpoint-only(lg) {
+        padding-left: $spacer*1.25;
+    }
 
     @include media-breakpoint-up(xxl) {
         max-width: 550px;
-        margin-left: $spacer*2.3;
+        margin-left: $spacer*2.9;
     }
 
     .h4 {
@@ -264,5 +358,135 @@
             margin-bottom: 0;
         }
 
+    }
+}
+
+// colour card stacks
+
+.gk-card-stack__grid {
+
+
+    border: 1px solid palevioletred;
+    padding-top: $spacer;
+    padding-bottom: $spacer*2;
+    display: flex;
+    width: 100%;
+
+    @include media-breakpoint-down(xl) {
+
+        display: block;
+
+        .ghostkit-grid-inner {
+            margin: 0;
+            display: block;
+
+            .gk-card-stack__col {
+                margin: 0 auto;
+                padding: $spacer*1.5;
+                margin-bottom: $spacer;
+
+                border: 1px solid red;
+
+                p {
+                    border: 1px solid cyan;
+                    height: 100%;
+                    display: block;
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+    }
+
+    @include media-breakpoint-between(md,xl) {
+
+        display: block;
+
+        .ghostkit-grid-inner {
+            margin: 0;
+            display: block;
+
+            .gk-card-stack__col {
+                max-width: 500px;
+                width: 80%;
+
+                p {
+                    min-height: 20px;
+                }
+            }
+
+        }
+
+    }
+
+
+    .gk-card-stack__col {
+        display: block;
+
+        .h5 {
+            margin-bottom: $spacer;
+        }
+        p {
+            display: block;
+            margin-bottom: 0;
+            min-height: auto !important;
+        }
+
+        border: 1px solid teal;
+
+        padding: $spacer*2;
+        align-content: center;
+
+        &:nth-of-type(5n+1) {
+            background-color: #247A74;
+        }
+
+        &:nth-of-type(5n+2) {
+            background-color: #A0703E;
+        }
+
+        &:nth-of-type(5n+3) {
+            background-color: #553211;
+        }
+
+        &:nth-of-type(5n+4) {
+            background-color: #254725;
+        }
+
+        &:nth-of-type(5n+5) {
+            background-color: #302040;
+        }
+
+    }
+
+}
+
+// clear block
+.gk-clear {
+    clear: both;
+    border: 1px solid yellow;
+    padding-top: $spacer/2;
+    @include media-breakpoint-up(xl) {
+        padding-top: $spacer*3;
+    }
+}
+
+// deorative
+
+.gk-decorative {
+    border: 0;
+    margin: 0;
+    margin-bottom: $spacer*2;
+    padding: 0;
+    position: relative;
+    &:after {
+        z-index: 2;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        background: transparent url('../images/page-decrotive.svg') no-repeat center;
+        top: -15px;
     }
 }
