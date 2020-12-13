@@ -20,25 +20,71 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>This is a H1 heading</h1>
-                <h2>This is a H2 heading</h2>
-                <h3>This is a H3 heading</h3>
-                <h4>This is a H4 heading</h4>
-                <h5>This is a H5 heading</h5>
-                <h6>This is a H6 heading</h6>
-                <p class="lead">This is a lead paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aspernatur enim incidunt ullam similique consequuntur reiciendis tenetur molestias modi, fuga illum, minus at tempora eum.</p>
-                <p>This is a normal paragraph: Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Cupiditate repudiandae harum atque commodi, iste assumenda quod quas aliquam. Culpa, quam officiis veniam, magnam inventore repudiandae esse qui voluptas aspernatur, maxime sequi minus iure assumenda reiciendis possimus. Nemo nobis dolore molestias inventore temporibus? Nihil praesentium consectetur quaerat culpa sequi.</p>
-                <p class="small">This is a small paragraph: Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Commodi, accusantium. Asperiores, obcaecati.</p>
-                <a href="#" class="btn btn-primary">Button Primary</a>
-                <a href="#" class="btn btn-secondary">Button Secondary</a>
-                <a href="#" class="btn btn-white">Button White</a>
-                <a href="#" class="btn btn-dark">Button Dark</a>
-            </div>
-        </div>
-    </div>
+    <section class="welcome py-15 pt-md-350">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-1 welcome-slider__col">
+                    <div class="owl-carousel welcome-slider owl-theme position-relative">
+
+                        <?php if (have_rows('welcome_slider')): ?>
+                            <?php while (have_rows('welcome_slider')): the_row(); ?>
+                                <div class="item welcome-slider__item text-center py-25 pb-lg-5 px-1">
+                                    <h3 class="h1 text-white"><?php the_sub_field('slider_title'); ?></h3>
+                                    <?php if( get_sub_field('slider_sub_heading') ): ?>
+                                        <h4 class="h1 font-italic font-weight-normal text-white"><?php the_sub_field('slider_sub_heading'); ?></h4>
+                                    <?php endif; ?>
+                                    <p class="mt-1 mt-md-2 h3 font-pop text-white font-weight-bold"><?php the_sub_field('slider_blurb'); ?></p>
+                                </div><!-- item -->
+                                <?php endwhile; ?>
+                        <?php endif; ?>
+
+                    </div><!-- welcome-slider -->
+                </div><!-- col -->
+                <div class="col-lg-6">
+                    <div class="max-width-550">
+                    <h2 class="h1"><?php the_field('intro_heading'); ?></h2>
+                    <?php if( get_field('intro_subheading') ): ?>
+                        <h3 class="h4 font-pop mb-50"><?php the_field('intro_subheading'); ?></h3>
+                    <?php endif; ?>
+                    <p class="mb-150"><?php the_field('intro_paragraph'); ?></p>
+                    <a href="<?php the_field('intro_button__link'); ?>" class="btn btn-primary"><?php the_field('intro_button__text'); ?></a>
+                    </div><!-- max-width--550 -->
+                </div><!-- col -->
+            </div><!-- row-->
+        </div><!-- container -->
+    </section><!-- welcome section-->
+
+    <section class="what-we-do">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <h2 class="h1 text-center mb-1">
+                        <?php the_field('section_heading');?>
+                    </h2>
+                    <p class="text-center">
+                        <?php the_field('section_intro');?>
+                    </p>
+                </div><!-- col -->
+            </div><!-- row -->
+            <div class="row justify-content-center">
+
+                    <?php if (have_rows('service_cards')): ?>
+                        <?php while (have_rows('service_cards')): the_row(); ?>
+                            <div class="col-12 col-md-6 col-xl service__card-wrapper mb-1">
+                                <div class="py-1 px-50 service__card text-center h-100">
+                                    <img src="<?php the_sub_field('card_icon');?>" alt="<?php the_sub_field('card_title');?> Icon" class="img-fluid mb-1">
+                                    <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title');?></h3>
+                                    <p class="text-white mb-0"><?php the_sub_field('card_text');?></p>
+                                </div>
+                            </div><!-- col -->
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </section><!-- what-we-do -->
+
+
 </main>
 
 <?php get_footer();

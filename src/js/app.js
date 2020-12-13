@@ -1,7 +1,20 @@
 jQuery(function () {
 
-    // equal height cards
+    // owl homepage carousel
 
+    jQuery('.welcome-slider').owlCarousel({
+        items: 1,
+        center: true,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 8000,
+        loop: true,
+        margin: 0,
+        dots: true,
+        nav: false
+    });
+
+    // equal height cards
     var maxHeight = -1;
 
     jQuery('.ghostkit-icon-box-content').each(function() {
@@ -11,6 +24,7 @@ jQuery(function () {
     jQuery('.ghostkit-icon-box-content').each(function() {
         jQuery(this).height(maxHeight);
     });
+
 
     // make parent active
     jQuery('li.nav-item.active').parents('li.nav-item').addClass('drop-down-active');
