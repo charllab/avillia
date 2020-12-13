@@ -2,10 +2,10 @@
 
     <main>
 
-        <section class="welcome py-15 pt-md-350">
+        <section class="welcome py-2 pt-md-350">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 mb-1 welcome-slider__col">
+                    <div class="col-lg-6 mb-1 welcome-slider__col mb-2 mb-lg-0">
                         <div class="owl-carousel welcome-slider owl-theme position-relative">
 
                             <?php if (have_rows('welcome_slider')): ?>

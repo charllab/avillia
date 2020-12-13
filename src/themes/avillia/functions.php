@@ -48,6 +48,31 @@ if (!function_exists('custom_after_setup_theme')) {
     }
 }
 
+
+
+/* Register WordPress  Gutenberg Custom Post Types */
+function cw_post_type() {
+
+    register_post_type( 'development',
+        // WordPress CPT Options Start
+        array(
+            'labels' => array(
+                'name' => __( 'Development' ),
+                'singular_name' => __( 'Development' )
+            ),
+            'has_archive' => true,
+            'public' => true,
+            'rewrite' => array('slug' => 'development'),
+            'show_in_rest' => true,
+            'supports' => array('editor')
+        )
+    );
+}
+
+add_action( 'init', 'cw_post_type' );
+
+
+
 /* Misc */
 remove_action('wp_head', 'wp_generator');
 add_filter('allow_dev_auto_core_updates', '__return_false');

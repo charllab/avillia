@@ -112,7 +112,7 @@ main {
 
 // general page
 
-.page {
+.page, .development-template-default {
     background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
     background-position-y: 310px;
     background-size: 100%;
@@ -476,4 +476,68 @@ main {
     -o-object-fit: cover;
     object-fit: cover;
     overflow: hidden;
+}
+
+// development specific
+
+.development-welcome {
+    .owl-item {
+        margin-bottom: 10px;
+    }
+}
+
+h2.development-description {
+    line-height: 1.7;
+}
+
+.development__logo--shadow {
+    background-color: #fff;
+    border: 1px solid rebeccapurple;
+    box-shadow: -3.09px 5px 4px #00000040;
+}
+
+.development__card {
+
+    .development-item {
+
+    }
+
+    .development-img {
+        height: 320px;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    border-radius: 0;
+
+    .card-img-top {
+        border-radius: 0;
+
+        @include media-breakpoint-up(xl) {
+            min-height: 508px;
+        }
+
+    }
+
+    h4.card-title {
+        font-size: 1.5625rem;
+        line-height: 1.2;
+
+        @media (max-width: 340px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    .card-text {
+        @media (max-width: 340px) {
+            font-size: .85rem;
+        }
+    }
+
+    .card-footer {
+        background-color: #fff;
+        border: transparent;
+    }
 }

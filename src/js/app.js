@@ -38,6 +38,31 @@ jQuery(function () {
         jQuery(this).height(maxHeight);
     });
 
+    // js map search
+
+    jQuery('.js-update-search').on('click', function (e) {
+        e.preventDefault();
+
+        var currentUrl = [location.protocol, '//', location.host, location.pathname].join('');
+
+        location.href = currentUrl + '?' + jQuery('.js-search-form').serialize();
+    });
+
+    // js toggle listing views
+    jQuery('.js-listing-page-toggle input').on('change', function () {
+        var rel = jQuery(this).attr('rel');
+
+        if(rel == 'js-view-list') {
+            jQuery('.js-view-list').show();
+            jQuery('.js-view-map').hide();
+        } else {
+            jQuery('.js-view-list').hide();
+            jQuery('.js-view-map').show();
+
+            map.fitBounds(bounds, 150);
+        }
+    });
+
 
     // make parent active
     jQuery('li.nav-item.active').parents('li.nav-item').addClass('drop-down-active');

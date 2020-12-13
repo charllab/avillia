@@ -61,7 +61,7 @@ if (have_rows('flexible_content')):
                             <?php if (have_rows('button')): ?>
                                 <div class="mt-1 mt-lg-2">
                                     <?php while (have_rows('button')): the_row(); ?>
-                                        <a href="<?php the_sub_field('link'); ?>" class="btn btn-light">
+                                        <a href="<?php the_sub_field('link'); ?>" class="btn btn-light" target="_blank">
                                             <?php the_sub_field('button_label'); ?>
                                         </a>
                                     <?php endwhile; ?>

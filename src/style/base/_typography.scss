@@ -53,10 +53,16 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 2.5rem;
+    font-size: 1.87rem;
 
     // iphone 5
-    @media (max-width: 340px) {}
+    @media (max-width: 340px) {
+        font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 2.5rem;
+    }
 }
 
 h3, .h3 {

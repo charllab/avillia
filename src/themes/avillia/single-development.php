@@ -1,41 +1,46 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
-<?php while (have_posts()) : the_post(); ?>
+<main class="py-2 py-lg-3">
 
-    <?php if (is_page(46)) : ?>
+    <section class="welcome development-welcome py-2 pt-md-1 pb-md-350">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-1 welcome-slider__col mb-2 mb-lg-0">
+                    <div class="owl-carousel welcome-slider owl-theme position-relative">
+                        <div class="item welcome-slider__item text-center py-25 pb-lg-5 px-1 development__logo--shadow">
+                            <img src="<?php the_field('development_squared_logo'); ?>" alt="<?php the_title(); ?> logo" class="img-fluid d-block">
+                        </div><!-- item -->
+                    </div><!-- welcome-slider -->
+                </div><!-- col -->
+                <div class="col-lg-6">
+                    <div class="max-width-550">
+                        <h2 class="development-description"><?php the_field('development_description'); ?></h2>
+                    </div><!-- max-width--550 -->
+                </div><!-- col -->
+            </div><!-- row-->
+        </div><!-- container -->
+    </section><!-- welcome section-->
 
-        <?php get_template_part('loop-templates/content', 'development'); ?>
 
-    <?php else : ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <?php if (have_posts()) : ?>
 
-        <main class="py-2 py-lg-3">
+                    <?php /* Start the Loop */ ?>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                            <?php /* Start the Loop */ ?>
+                        <?php the_content(); ?>
 
-                            <?php while (have_posts()) : the_post(); ?>
+                    <?php endwhile; ?>
 
-                                <?php the_content(); ?>
-
-                            <?php endwhile; ?>
-
-                        <?php endif; ?>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
+        </div>
+    </div>
 
-        </main>
-
-    <?php endif; ?>
-
-<?php endwhile; // end of the loop. ?>
-
+</main>
 
 <?php
 // check if the flexible content field has rows of data
@@ -85,6 +90,12 @@ if (have_rows('bottom_addition')):
         <?php endif; ?>
     <?php endwhile; ?>
 <?php endif; ?>
+
+<section class="mb-2 mb-md-3">
+    <div class="container">
+        <a href="<?php echo esc_url(home_url('/our-developments')); ?>" class="btn btn-primary gk-button--full">Explore <span class="d-none d-sm-inline">&nbsp;All&nbsp;</span> Developments</a>
+    </div><!-- container -->
+</section><!-- button-->
 
 
 <?php get_footer(); ?>
