@@ -2,6 +2,10 @@ main {
     overflow: hidden;
 }
 
+.bg-soft {
+    background-color: $soft;
+}
+
 // decrotives
 .bg-gradient--angled {
     background: rgb(68, 43, 80);
@@ -63,11 +67,17 @@ main {
 @include media-breakpoint-up(xl) {
 
     .max-width-744 {
+        display: block !important;
         max-width: 744px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .max-width-550 {
+        display: block !important;
         max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -90,6 +100,11 @@ main {
 }
 
 .home main {
+    background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
+    background-size: 100%;
+}
+
+.bg__pattern--page {
     background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
     background-size: 100%;
 }
@@ -304,7 +319,67 @@ main {
     }
 }
 
-// home acf service cards
+
+// homepage welcome cards
+
+.welcome-cards {
+    //border: 1px solid hotpink;
+
+    .card-group {
+        //border: 1px solid indianred;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+    }
+
+    .card {
+        background-color: transparent;
+        border-radius: 0;
+       // background-color: greenyellow;
+        border-color: transparent;
+
+        &:nth-of-type(2) {
+            box-shadow: 0px 3px 6px #00000029;
+        }
+
+        @include media-breakpoint-only(md) {
+            h2 {
+                min-height: $spacer*2;
+            }
+            p.card-text {
+                //border: 1px solid royalblue;
+                font-size: .85rem;
+                line-height: 1.7;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+
+            box-shadow: 0px 3px 6px #00000029;
+            margin-bottom: $spacer*.75;
+
+        }
+    }
+    .card-body {
+       // border: 1px solid olivedrab;
+        max-width: 476px;
+        padding: $spacer*.75 $spacer*1.45 $spacer;
+
+        @include media-breakpoint-only(md) {
+            padding: $spacer*.75 $spacer*1.1;
+        }
+    }
+
+    .card-footer {
+        background: transparent;
+        border: none;
+        padding: 0 $spacer*1.45 $spacer;
+    }
+}
+
+// homepage what we do & service cards
+
 
 .service__card-wrapper {
 
@@ -349,4 +424,56 @@ main {
         }
     }
 
+}
+
+// homepage our development section
+
+.bg-clip--bottom {
+    padding-bottom: $spacer*3;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: $spacer*4;
+        clip-path: polygon(0 0, 100% 0, 100% 98%, 0 76%);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: $spacer*5.5;
+        clip-path: polygon(0 0, 100% 0, 100% 98%, 0 70%);
+    }
+}
+
+.bg-clip--top {
+    padding-top: $spacer*4;
+    clip-path: polygon(0 10%, 100% 58%, 100% 100%, 0% 100%);
+
+    @include media-breakpoint-up(md) {
+        padding-top: $spacer*5;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: $spacer*6;
+        clip-path: polygon(0 10%, 100% 66%, 100% 100%, 0% 100%);
+    }
+}
+
+.promo-min-height {
+    min-height: 320px;
+}
+
+@include media-breakpoint-up(xl) {
+
+    .portriat-height--xl-up {
+        height: 100% !important;
+        min-height: 100%;
+    }
+
+}
+
+.promo-img {
+    height: 320px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
 }
