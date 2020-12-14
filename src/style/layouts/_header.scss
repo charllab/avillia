@@ -39,12 +39,12 @@
     }
 
     // active link
-    .navbar-nav li.active .nav-link {
+    .navbar-nav li.active:not(#menu-item-26) .nav-link {
         color: white;
         font-weight: 500;
         position: relative;
 
-        &::after:not(#menu-item-26) {
+        &::after {
             content: '';
             position: absolute;
             width: 100%;
@@ -85,8 +85,17 @@
         color: $primary;
         font-weight: 500;
 
+        .dropdown-menu {
+            min-width: 200px;
+        }
+
         .nav-link {
             position: relative;
+            color: $primary;
+
+            &:hover {
+                color: $primary;
+            }
 
             &::before {
                 content: '';

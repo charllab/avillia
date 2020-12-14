@@ -1,14 +1,17 @@
 jQuery(function () {
 
 
+    // show and hide team bios
+
+    // full bio click
     jQuery('.js-bio__btn').on('click', function () {
         jQuery('.js-bio-col--target').removeClass('bio-block-expanded');
         jQuery(this).parents('.js-bio-col--target').toggleClass('bio-block-expanded');
     });
+    // close button click
     jQuery('.js-bio__close').on('click', function () {
         jQuery('.js-bio-col--target').removeClass('bio-block-expanded');
     });
-
 
 
     // owl homepage carousel

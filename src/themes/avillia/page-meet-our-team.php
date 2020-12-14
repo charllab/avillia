@@ -4,14 +4,14 @@ get_header();
 
     <main class="py-2 py-lg-4">
 
-        <div class="container border-red">
+        <div class="container">
             <div class="row">
 
                 <?php if (have_rows('team_members')): ?>
                     <?php while (have_rows('team_members')): the_row(); ?>
                         <div class="col-lg-6 js-bio-col--target mb-2 mb-md-3 mb-lg-4">
 
-                            <div class="container member-block px-0 border-cyan">
+                            <div class="container member-block px-0">
                                 <div class="d-flex flex-column flex-md-row no-gutters justify-content-center align-items-center">
 
                                         <img src="<?php the_sub_field('photo'); ?>"

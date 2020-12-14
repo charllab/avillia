@@ -122,11 +122,11 @@ main {
 // page botttom listing area
 
 .page-listing {
-    border: 1px solid hotpink;
+    //border: 1px solid hotpink;
 
     ul {
         list-style-type: circle;
-        border: 1px solid #0c6ca0;
+        //border: 1px solid cornflowerblue;
         padding-left: 18px;
 
         li {
@@ -159,7 +159,7 @@ main {
 }
 
 .page-list {
-    border: 1px solid seagreen;
+    //border: 1px solid seagreen;
     @include media-breakpoint-down(sm) {
         min-width: 100%;
     }
@@ -177,8 +177,8 @@ main {
 
 .welcome-slider__col {
 
-    background: khaki;
-    border: 1px aquamarine;
+    //background: khaki;
+    //border: 1px solid aquamarine;
 
     &:before {
         position: absolute;
@@ -210,7 +210,7 @@ main {
             height: 115px;
             top: -20px;
             left: -$spacer;
-            border: 1px solid slateblue;
+            //border: 1px solid slateblue;
         }
 
         @include media-breakpoint-up(xl) {
@@ -218,7 +218,7 @@ main {
             height: 215px;
             top: -$spacer*2.3;
             left: $spacer*2.3;
-            border: 1px solid olive;
+            //border: 1px solid olive;
         }
     }
 
@@ -248,7 +248,7 @@ main {
         }
 
         @include media-breakpoint-up(lg) {
-            border: 1px solid firebrick;
+            //border: 1px solid firebrick;
             bottom: -$spacer*0.95;
             right: -$spacer;
         }
@@ -271,7 +271,7 @@ main {
 // home page slider
 
 .welcome-slider {
-    border: 1px solid royalblue;
+    //border: 1px solid royalblue;
     position: relative;
     z-index: 10;
 
@@ -492,7 +492,7 @@ h2.development-description {
 
 .development__logo--shadow {
     background-color: #fff;
-    border: 1px solid rebeccapurple;
+    //border: 1px solid rebeccapurple;
     box-shadow: -3.09px 5px 4px #00000040;
 }
 

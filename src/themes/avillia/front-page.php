@@ -127,9 +127,9 @@
                                         <div class="row">
                                             <div class="col-md-6 order-md-1 mb-50">
                                                 <div
-                                                    class="d-flex h-100 border-cyan flex-column justify-content-center promo-min-height"
+                                                    class="d-flex h-100 flex-column justify-content-center promo-min-height"
                                                     style="background: #254725">
-                                                    <h2 class="w-100 border-red text-white text-center"><?php the_sub_field('development_name_1'); ?></h2>
+                                                    <h2 class="w-100 text-white text-center"><?php the_sub_field('development_name_1'); ?></h2>
                                                 </div>
                                             </div><!-- col -->
                                             <div class="col-12 order-md-0 mb-1">
@@ -158,10 +158,10 @@
                                                 <div class="row no-gutters">
                                                     <div class="col-12">
                                                         <div
-                                                            class="d-flex h-100 border-cyan flex-column justify-content-center promo-min-height"
+                                                            class="d-flex h-100 flex-column justify-content-center promo-min-height"
                                                             style="background: #A0703E">
 
-                                                            <h2 class="w-100 border-red text-white text-center"><?php the_sub_field('development_name_2'); ?></h2>
+                                                            <h2 class="w-100 text-white text-center"><?php the_sub_field('development_name_2'); ?></h2>
 
                                                         </div><!-- flex-->
                                                     </div><!-- col -->

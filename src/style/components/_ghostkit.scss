@@ -229,7 +229,7 @@
 
 .gk-pingpong__col--img {
 
-    border: 1px solid thistle;
+    //border: 1px solid thistle;
 
     .gk-pingpong__img {
         margin-bottom: 0;
@@ -366,7 +366,7 @@
 .gk-card-stack__grid {
 
 
-    border: 1px solid palevioletred;
+    //border: 1px solid palevioletred;
     padding-top: $spacer;
     padding-bottom: $spacer*2;
     display: flex;
@@ -385,10 +385,10 @@
                 padding: $spacer*1.5;
                 margin-bottom: $spacer;
 
-                border: 1px solid red;
+                //border: 1px solid red;
 
                 p {
-                    border: 1px solid cyan;
+                    //border: 1px solid cyan;
                     height: 100%;
                     display: block;
                     margin-bottom: 0;
@@ -433,7 +433,7 @@
             min-height: auto !important;
         }
 
-        border: 1px solid teal;
+        //border: 1px solid teal;
 
         padding: $spacer*2;
         align-content: center;
@@ -465,7 +465,7 @@
 // clear block
 .gk-clear {
     clear: both;
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
     padding-top: $spacer/2;
     @include media-breakpoint-up(xl) {
         padding-top: $spacer*3;

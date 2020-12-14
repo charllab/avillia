@@ -34,9 +34,9 @@
                                   href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>">+1 <?php the_field('fax', 'options'); ?></a>
                     </p>
 
-                    <div class="social-links mb-150 mb-xl-0 border-red">
+                    <div class="social-links mb-150 mb-xl-0">
                         <?php while( have_rows('social_links', 'options') ): the_row(); ?>
-                            <a class="social-link btn btn-link text-white px-0 mr-50 border-cyan" target="_blank" href="<?php the_sub_field('url'); ?>">
+                            <a class="social-link btn btn-link text-white px-0 mr-50" target="_blank" href="<?php the_sub_field('url'); ?>">
                                 <i class="<?php the_sub_field('icon_class'); ?> fa-2x">
                                     <span class="sr-only"><?php the_sub_field('label'); ?></span>
                                 </i>
