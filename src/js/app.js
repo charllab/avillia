@@ -8,28 +8,35 @@ jQuery(function () {
             event.stopPropagation();
         });
 
-       //alert('Less than 1440');
+        //alert('Less than 1440');
     } else {
         //alert('More than 1440');
     }
 
 
-    // show and hide team bios
-
     // full bio click
+
     jQuery('.js-bio__btn').on('click', function () {
-        var bio = jQuery('.js-bio-col--target');
-        bio.removeClass('bio-block-expanded');
-        jQuery(this).parents('.js-bio-col--target').toggleClass('bio-block-expanded');
-        var countposition = bio.data('counter');
-        countposition -= 2;
-        bio.addClass('order-lg-' + countposition);
-    });
-    // close button click
-    jQuery('.js-bio__close').on('click', function () {
-        jQuery('.js-bio-col--target').removeClass('bio-block-expanded');
+        var bios = jQuery('.js-bio-col--target');
+        bios.removeClass('bio-block-expanded');
+        jQuery.each(bios, function () {
+            var temp = jQuery(this).data('counter');
+            jQuery(this).removeClass('order-lg-' + (temp - 2));
+        });
+        var thisBio = jQuery(this).parents('.js-bio-col--target');
+        var idx = thisBio.data('counter');
+        thisBio.addClass('order-lg-' + (idx - 2))
+        thisBio.toggleClass('bio-block-expanded');
     });
 
+    // close button click
+
+    jQuery('.js-bio__close').on('click', function () {
+        var closedBio = jQuery(this).parents('.js-bio-col--target');
+        closedBio.removeClass('bio-block-expanded');
+        var idx = closedBio.data('counter');
+        closedBio.removeClass('order-lg-' + (idx - 2));
+    });
 
     // owl homepage carousel
 

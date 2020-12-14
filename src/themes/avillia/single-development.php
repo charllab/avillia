@@ -7,7 +7,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-1 welcome-slider__col mb-2 mb-lg-0">
                     <div class="owl-carousel welcome-slider owl-theme position-relative">
-                        <div class="item welcome-slider__item text-center py-25 pb-lg-5 px-1 development__logo--shadow">
+                        <div class="item welcome-slider__item text-center p-2 development__logo--shadow d-flex justify-content-center align-items-center">
                             <img src="<?php the_field('development_squared_logo'); ?>" alt="<?php the_title(); ?> logo" class="img-fluid d-block">
                         </div><!-- item -->
                     </div><!-- welcome-slider -->
