@@ -548,6 +548,15 @@ h2.development-description {
     }
 }
 
+.inline-li-form {
+    @include media-breakpoint-up(lg) {
+        margin-top: $spacer/2;
+    }
+    @include media-breakpoint-down(xl) {
+        width: 100%;
+    }
+}
+
 .btn.development__btn {
     min-width: 156px;
     border: 2px solid $primary;
@@ -574,3 +583,59 @@ h2.development-description {
         }
     }
 }
+
+
+// meet our team
+
+.bio-block__profile {
+    background-color: #fff;
+    box-shadow: 0px 3px 6px #00000029;
+
+    .h4, .h5 {
+        color: $body-color;
+    }
+}
+
+.bio-block__img {
+
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        max-width: 398px;
+        width: 50%;
+    }
+}
+
+.bio-block__profile {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+
+}
+
+.full-bio {
+    display: none;
+}
+
+.bio-block-expanded {
+    min-width: auto;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+
+    .bio-block__profile {
+        width: 100% !important;
+    }
+
+    .full-bio__btn {
+        display: none;
+    }
+
+    .full-bio {
+        display: block;
+    }
+}
+
+

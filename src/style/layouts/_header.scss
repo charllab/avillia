@@ -44,7 +44,7 @@
         font-weight: 500;
         position: relative;
 
-        &::after {
+        &::after:not(#menu-item-26) {
             content: '';
             position: absolute;
             width: 100%;
@@ -288,8 +288,10 @@
     }
 }
 
-.page.page-id-46 {
-    #menu-item-60 {
-        background-color: pink;
+.page.page-id-21 {
+    #menu-item-26 a {
+        &::after {
+
+        }
     }
 }

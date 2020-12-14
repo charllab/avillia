@@ -27,7 +27,7 @@ $accom_query = new WP_Query($args);
         <div class="container">
             <div class="row">
                 <div class="col-12 pb-150">
-                    <ul class="nav nav-tabs nav-tabs--developments flex-row justify-content-center justify-content-lg-between align-items-center" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs nav-tabs--developments flex-row justify-content-center justify-content-xxxl-between align-items-center" id="myTab" role="tablist">
                         <li class="nav-item d-none d-lg-inline">
                             <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab"
                                aria-controls="all" aria-selected="true">All</a>
@@ -58,7 +58,7 @@ $accom_query = new WP_Query($args);
                         </li>
 
 
-                        <li>
+                        <li class="inline-li-form">
                             <form class="js-search-form d-flex justify-content-center align-content-center">
                                 <div class="btn-group btn-group-toggle listing-page-toggle js-listing-page-toggle"
                                      data-toggle="buttons">

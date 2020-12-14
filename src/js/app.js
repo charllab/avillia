@@ -1,5 +1,16 @@
 jQuery(function () {
 
+
+    jQuery('.js-bio__btn').on('click', function () {
+        jQuery('.js-bio-col--target').removeClass('bio-block-expanded');
+        jQuery(this).parents('.js-bio-col--target').toggleClass('bio-block-expanded');
+    });
+    jQuery('.js-bio__close').on('click', function () {
+        jQuery('.js-bio-col--target').removeClass('bio-block-expanded');
+    });
+
+
+
     // owl homepage carousel
 
     jQuery('.welcome-slider').owlCarousel({
