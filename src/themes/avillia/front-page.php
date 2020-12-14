@@ -122,8 +122,8 @@
                         <?php if (have_rows('development_promo_section_1')): ?>
                             <?php while (have_rows('development_promo_section_1')): the_row(); ?>
                                 <div class="col-xl-6 js-gallery js-img-obj-fit__container">
-                                    <a href="<?php the_sub_field('development_link_1'); ?>"
-                                       class="development-promo promo-item">
+                                    <a href="<?php the_sub_field('development_link_1'); ?>#albertaregion"
+                                       class="development-promo promo-item text-decoration--none">
                                         <div class="row">
                                             <div class="col-md-6 order-md-1 mb-50">
                                                 <div
@@ -151,8 +151,8 @@
                         <?php if (have_rows('development_promo_section_2')): ?>
                             <?php while (have_rows('development_promo_section_2')): the_row(); ?>
                                 <div class="col-xl-6 js-gallery js-img-obj-fit__container">
-                                    <a href="<?php the_sub_field('development_link_2'); ?>"
-                                       class="development-promo promo-item">
+                                    <a href="<?php the_sub_field('development_link_2'); ?>#okanaganregion"
+                                       class="development-promo promo-item text-decoration--none">
                                         <div class="row">
                                             <div class="col-md-6 order-md-1 mb-50">
                                                 <div class="row no-gutters">
@@ -161,7 +161,7 @@
                                                             class="d-flex h-100 flex-column justify-content-center promo-min-height"
                                                             style="background: #A0703E">
 
-                                                            <h2 class="w-100 text-white text-center"><?php the_sub_field('development_name_2'); ?></h2>
+                                                            <h2 class="w-100 text-white text-center px-1"><?php the_sub_field('development_name_2'); ?></h2>
 
                                                         </div><!-- flex-->
                                                     </div><!-- col -->

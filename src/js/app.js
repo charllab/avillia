@@ -1,5 +1,32 @@
 jQuery(function () {
 
+
+    // make it rain
+    let url = location.href.replace(/\/$/, "");
+
+    if (location.hash) {
+        const hash = url.split("#");
+        $('#myTab a[href="#' + hash[1] + '"]').tab("show");
+        url = location.href.replace(/\/#/, "#");
+        history.replaceState(null, null, url);
+        setTimeout(() => {
+            $(window).scrollTop(0);
+        }, 400);
+    }
+
+    $('a[data-toggle="tab"]').on("click", function () {
+        let newUrl;
+        const hash = $(this).attr("href");
+        if (hash == "#home") {
+            newUrl = url.split("#")[0];
+        } else {
+            newUrl = url.split("#")[0] + hash;
+        }
+        newUrl += "/";
+        history.replaceState(null, null, newUrl);
+    });
+
+
     // remove click on dropdown on mobile expand
 
     if ($(window).width() < 1440) {
@@ -13,29 +40,33 @@ jQuery(function () {
         //alert('More than 1440');
     }
 
-
     // full bio click
-
     jQuery('.js-bio__btn').on('click', function () {
         var bios = jQuery('.js-bio-col--target');
         bios.removeClass('bio-block-expanded');
-        jQuery.each(bios, function () {
-            var temp = jQuery(this).data('counter');
-            jQuery(this).removeClass('order-lg-' + (temp - 2));
+        jQuery.each($('.js-bio-col--target'), function(i, bio) {
+            var temp = jQuery(bio).data('counter');
+            jQuery(bio).removeClass('order-lg-' + (temp - 2));
+            if (!jQuery(bio).hasClass('order-lg-' + temp))
+                jQuery(bio).addClass('order-lg-' + temp);
         });
         var thisBio = jQuery(this).parents('.js-bio-col--target');
         var idx = thisBio.data('counter');
-        thisBio.addClass('order-lg-' + (idx - 2))
+        if (idx % 2 == 1){
+            thisBio.addClass('order-lg-' + (idx - 2));
+            thisBio.removeClass('order-lg-' + idx);
+        }
         thisBio.toggleClass('bio-block-expanded');
     });
-
     // close button click
-
     jQuery('.js-bio__close').on('click', function () {
         var closedBio = jQuery(this).parents('.js-bio-col--target');
         closedBio.removeClass('bio-block-expanded');
         var idx = closedBio.data('counter');
-        closedBio.removeClass('order-lg-' + (idx - 2));
+        if (idx % 2 == 1){
+            closedBio.removeClass('order-lg-' + (idx - 2));
+            closedBio.addClass('order-lg-' + idx);
+        }
     });
 
     // owl homepage carousel
