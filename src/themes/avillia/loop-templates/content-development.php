@@ -58,7 +58,7 @@ $accom_query = new WP_Query($args);
                         </li>
 
 
-                        <li class="inline-li-form">
+                        <li class="inline-li-form border-pink">
                             <form class="js-search-form d-flex justify-content-center align-content-center">
                                 <div class="btn-group btn-group-toggle listing-page-toggle js-listing-page-toggle"
                                      data-toggle="buttons">

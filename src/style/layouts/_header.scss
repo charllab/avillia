@@ -163,7 +163,7 @@
 
             &::before {
                 content: '';
-                background: white;
+                background: white !important;
                 height: 60%;
                 width: 2px;
                 position: absolute;

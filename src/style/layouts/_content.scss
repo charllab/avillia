@@ -557,10 +557,46 @@ h2.development-description {
     }
 }
 
-.btn.development__btn {
-    min-width: 156px;
-    border: 2px solid $primary;
+ul.nav.nav-tabs li {
+    .development__btn {
+        min-width: 156px;
+        border: 2px solid $primary;
+        background-color: white;
+        color: $primary;
+    }
+
+    form, label, input {
+        box-shadow: none;
+        outline: none !important;
+    }
+
+
+    .development__btn {
+        background-color: white;
+    }
+
+    .development__btn.active {
+        color: white;
+        background-color: $primary;
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .development__btn.active + .development__btn {
+        background-color: white !important;
+        color: $primary !important;
+    }
+
+    .development__btn + .development__btn {
+        color: white !important;
+        background-color: $primary !important;
+    }
+
 }
+
+
 
 .nav-tabs--developments {
     border: transparent;
