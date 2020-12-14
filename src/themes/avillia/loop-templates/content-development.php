@@ -50,11 +50,11 @@ $accom_query = new WP_Query($args);
                                aria-controls="resortdevelopment" aria-selected="false">Resort Development</a>
                         </li>
                         <li class="nav-item d-none d-lg-inline">
-                            <a class="nav-link" id="albertaregion-tab" data-toggle="tab" href="#albertaregion" role="tab"
-                               aria-controls="albertaregion" aria-selected="false">Alberta Region</a>
+                            <a class="nav-link" id="okanaganregion-tab" data-toggle="tab" href="#okanaganregion" role="tab" aria-controls="okanaganregion" aria-selected="false">Okanagan Region</a>
                         </li>
                         <li class="nav-item d-none d-lg-inline">
-                            <a class="nav-link" id="okanaganregion-tab" data-toggle="tab" href="#okanaganregion" role="tab" aria-controls="okanaganregion" aria-selected="false">Okanagan Region</a>
+                            <a class="nav-link" id="albertaregion-tab" data-toggle="tab" href="#albertaregion" role="tab"
+                               aria-controls="albertaregion" aria-selected="false">Edmonton Region</a>
                         </li>
 
 

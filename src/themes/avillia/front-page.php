@@ -122,7 +122,7 @@
                         <?php if (have_rows('development_promo_section_1')): ?>
                             <?php while (have_rows('development_promo_section_1')): the_row(); ?>
                                 <div class="col-xl-6 js-gallery js-img-obj-fit__container">
-                                    <a href="<?php the_sub_field('development_link_1'); ?>#albertaregion"
+                                    <a href="<?php echo esc_url(home_url('/our-developments')); ?>#okanaganregion"
                                        class="development-promo promo-item text-decoration--none">
                                         <div class="row">
                                             <div class="col-md-6 order-md-1 mb-50">
@@ -151,7 +151,7 @@
                         <?php if (have_rows('development_promo_section_2')): ?>
                             <?php while (have_rows('development_promo_section_2')): the_row(); ?>
                                 <div class="col-xl-6 js-gallery js-img-obj-fit__container">
-                                    <a href="<?php the_sub_field('development_link_2'); ?>#okanaganregion"
+                                    <a href="<?php echo esc_url(home_url('/our-developments')); ?>#albertaregion"
                                        class="development-promo promo-item text-decoration--none">
                                         <div class="row">
                                             <div class="col-md-6 order-md-1 mb-50">
