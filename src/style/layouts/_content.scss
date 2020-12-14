@@ -639,3 +639,26 @@ h2.development-description {
 }
 
 
+// fallback for Ie11
+
+.compat-object-fit {
+    background-size: cover;
+    background-position: center center;
+
+    & > .img__object,
+    & > .promo-item > .promo-img {
+        opacity: 0;
+    }
+
+    & > .promo-item {
+        display: block;
+    }
+}
+
+// blog listing
+
+.listing-block-wrapper {
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16078);
+}
+
+

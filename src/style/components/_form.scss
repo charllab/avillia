@@ -488,3 +488,11 @@ body #gform_wrapper_1 .gform_footer {
     margin: 0;
     margin-top: $spacer;
 }
+
+// contact page submit button override
+
+body.page-id-23 #gform_wrapper_1 .gform_footer input[type=submit] {
+    border-radius: 0;
+    background-color: $secondary;
+    color: white;
+}
