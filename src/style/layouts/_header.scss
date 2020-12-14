@@ -39,19 +39,34 @@
     }
 
     // active link
-    .navbar-nav li.active:not(#menu-item-26) .nav-link {
-        color: white;
-        font-weight: 500;
-        position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            bottom: -3px;
-            left: 0;
-            height: 2px;
-            background-color: $primary;
+    .navbar-nav {
+        li:not(#menu-item-26) {
+
+            &.active {
+
+                .nav-link {
+                    color: white;
+                    font-weight: 500;
+                    position: relative;
+
+                    @include media-breakpoint-up(xxl) {
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            bottom: -3px;
+                            left: 0;
+                            height: 2px;
+                            background-color: white;
+                        }
+
+                    }
+
+                }
+            }
+
         }
     }
 
@@ -91,7 +106,13 @@
 
         .nav-link {
             position: relative;
-            color: $primary;
+            color: white;
+
+            @include media-breakpoint-up(xxl) {
+                color: $primary;
+                font-weight: 500 !important;
+            }
+
 
             &:hover {
                 color: $primary;
@@ -104,7 +125,23 @@
                 bottom: -3px;
                 left: 0;
                 height: 2px;
-                background-color: $primary;
+                background-color: transparent;
+
+                @include media-breakpoint-up(xxl) {
+                    background-color: white;
+                }
+
+            }
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+
+        .nav-link {
+            border-radius: 0;
+            &::before, &::after {
+                background-color: transparent !important;
             }
         }
     }
@@ -137,9 +174,9 @@
         }
 
         .dropdown.show {
-            background-color: $primary;
+            background-color: transparent;
             & > .nav-link {
-                color: white !important;
+                color: white;
             }
         }
 
@@ -176,11 +213,11 @@
                 font-family: $font-family-sans-serif;
                 color: $body-color;
                 font-size: .99rem;
-                border-bottom: 1px solid $secondary;
+                //border-bottom: 1px solid $secondary;
             }
             li.active .nav-link {
-                background-color: $secondary;
-                color: white;
+                background-color: $primary;
+                color: white !important;
                 &::after, &::before {
                     background-color: transparent;
                 }
@@ -299,8 +336,74 @@
 
 .page.page-id-21 {
     #menu-item-26 a {
-        &::after {
+
+        color: white;
+    }
+    .dropdown-menu .nav-link {
+        font-weight: 300;
+
+        @include media-breakpoint-up(xxl) {
+            color: $dark !important;
+        }
+
+    }
+
+    .dropdown-menu li.active .nav-link {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .home {
+        li.nav-item.active {
+            .nav-link {
+                color: $primary !important;
+                &:after {
+                    background-color: $primary !important;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .dropdown.show {
+        .nav-link.dropdown-toggle {
+            color: white !important;
+        }
+
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .home {
+        .dropdown.show {
+            .nav-link.dropdown-toggle {
+                color: $body-color !important;
+            }
 
         }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .home {
+        li.nav-item.active {
+            .nav-link {
+
+                &:after {
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        .dropdown.show {
+            background-color: transparent;
+            & > .nav-link {
+                color: $body-color;
+            }
+        }
+
     }
 }

@@ -1,5 +1,16 @@
 jQuery(function () {
 
+    if ($(window).width() < 1440) {
+
+        jQuery('li.menu-item.dropdown').click(function (event) {
+            event.stopPropagation();
+        });
+
+       //alert('Less than 1440');
+    } else {
+        //alert('More than 1440');
+    }
+
 
     // show and hide team bios
 
@@ -44,11 +55,11 @@ jQuery(function () {
     // equal height cards
     var maxHeight = -1;
 
-    jQuery('.ghostkit-icon-box-content').each(function() {
+    jQuery('.ghostkit-icon-box-content').each(function () {
         maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
     });
 
-    jQuery('.ghostkit-icon-box-content').each(function() {
+    jQuery('.ghostkit-icon-box-content').each(function () {
         jQuery(this).height(maxHeight);
     });
 
@@ -66,7 +77,7 @@ jQuery(function () {
     jQuery('.js-listing-page-toggle input').on('change', function () {
         var rel = jQuery(this).attr('rel');
 
-        if(rel == 'js-view-list') {
+        if (rel == 'js-view-list') {
             jQuery('.js-view-list').show();
             jQuery('.js-view-map').hide();
         } else {
@@ -86,11 +97,11 @@ jQuery(function () {
         side: 'right',
         menuWidth: '16.5rem',
         easyClose: true,
-        afterOpen: function() {
-            jQuery( 'body' ).toggleClass('noscroll');
+        afterOpen: function () {
+            jQuery('body').toggleClass('noscroll');
         },
-        afterClose: function() {
-            jQuery( 'body' ).toggleClass('noscroll');
+        afterClose: function () {
+            jQuery('body').toggleClass('noscroll');
         }
     });
 
@@ -141,9 +152,9 @@ var targetBlankExternalLinks = function () {
         + ')|(localhost:\\d{4})|(\\/.*))(\\/.*)?$', '');
 
     jQuery('a').filter(function () {
-            var href = jQuery(this).attr('href');
-            return !internalLinkRegex.test(href);
-        })
+        var href = jQuery(this).attr('href');
+        return !internalLinkRegex.test(href);
+    })
         .each(function () {
             jQuery(this).attr('target', '_blank');
         });

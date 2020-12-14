@@ -14,7 +14,7 @@ get_header(); ?>
             <div class="container">
 
                 <?php
-                $limit = 2;
+                $limit = 6;
 
                 $temp = $wp_query;
                 $wp_query = null;
