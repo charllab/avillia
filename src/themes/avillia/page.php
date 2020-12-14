@@ -2,39 +2,33 @@
 get_header();
 ?>
 
-<?php while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
 
-    <?php if (is_page(46)) : ?>
+        <?php if (is_page(46)) : ?>
 
-        <?php get_template_part('loop-templates/content', 'development'); ?>
+            <?php get_template_part('loop-templates/content', 'development'); ?>
 
-    <?php else : ?>
+        <?php else : ?>
 
-        <main class="py-2 py-lg-3">
+            <main class="py-2 py-lg-3">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <?php if (have_posts()) : ?>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
 
-                            <?php /* Start the Loop */ ?>
+                            <?php the_content(); ?>
 
-                            <?php while (have_posts()) : the_post(); ?>
-
-                                <?php the_content(); ?>
-
-                            <?php endwhile; ?>
-
-                        <?php endif; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </main>
+            </main>
 
-    <?php endif; ?>
+        <?php endif; ?>
 
-<?php endwhile; // end of the loop. ?>
+    <?php endwhile; // end of the loop. ?>
+<?php endif; ?>
 
 
 <?php
@@ -44,14 +38,17 @@ if (have_rows('bottom_addition')):
 // loop through the rows of data
     while (have_rows('bottom_addition')) : the_row();
         if (get_row_layout() == 'addition'): ?>
-            <section class="page-listing position-relative" style="background: transparent url(<?php the_sub_field('faded_background_image');?>) no-repeat top left; background-size: cover;">
+            <section class="page-listing position-relative"
+                     style="background: transparent url(<?php the_sub_field('faded_background_image'); ?>) no-repeat top left; background-size: cover;">
 
                 <div class="block__white-tint-overlay position-absolute" style="z-index:1;"></div>
 
                 <div class="container-fluid px-xl-0 position-relative" style="z-index: 2">
                     <div class="row">
-                        <div class="col-xl-6 d-none d-xl-block position-relative" style="background: transparent url(<?php the_sub_field('faded_background_image');?>) no-repeat top left; background-size: cover;">
-                            <div class="block__gradient-overlay--left-to-right position-absolute" style="z-index:1;"></div>
+                        <div class="col-xl-6 d-none d-xl-block position-relative"
+                             style="background: transparent url(<?php the_sub_field('faded_background_image'); ?>) no-repeat top left; background-size: cover;">
+                            <div class="block__gradient-overlay--left-to-right position-absolute"
+                                 style="z-index:1;"></div>
                         </div><!-- col -->
 
                         <div class="col-xl-6 py-25 pt-xl-3  pb-xl-6 page-listing__content">
