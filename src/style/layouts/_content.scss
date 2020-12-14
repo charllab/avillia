@@ -496,11 +496,17 @@ h2.development-description {
     box-shadow: -3.09px 5px 4px #00000040;
 }
 
+
+// remove card border radius
+.card-group > .card:only-child,
+.card-group > .card:only-child .card-img-top, .card-group > .card:only-child .card-header {
+    border-radius: 0 !important;
+}
 .development__card {
 
-    .development-item {
-
-    }
+    box-shadow: 0px 3px 6px #00000029;
+    border: transparent;
+    background-color: transparent;
 
     .development-img {
         height: 320px;
@@ -537,7 +543,34 @@ h2.development-description {
     }
 
     .card-footer {
-        background-color: #fff;
+        background-color: transparent;
         border: transparent;
+    }
+}
+
+.btn.development__btn {
+    min-width: 156px;
+    border: 2px solid $primary;
+}
+
+.nav-tabs--developments {
+    border: transparent;
+}
+
+#developmentListing {
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        font-weight: bold;
+        background-color: transparent;
+        border: 0;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 2px;
+            background-color: $primary;
+            left: 5%;
+            bottom: 5px;
+        }
     }
 }

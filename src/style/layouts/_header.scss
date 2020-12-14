@@ -100,7 +100,7 @@
         }
     }
 
-    @include media-breakpoint-down(xxl) {
+    @include media-breakpoint-down(xl) {
         .navbar-nav li.active .nav-link {
             position: relative;
             color: lighten($secondary,15%);
@@ -285,5 +285,11 @@
 .push {
     @include media-breakpoint-up(xxl) {
         right: 0 !important;
+    }
+}
+
+.page.page-id-46 {
+    #menu-item-60 {
+        background-color: pink;
     }
 }
