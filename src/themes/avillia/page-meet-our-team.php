@@ -8,8 +8,9 @@ get_header();
             <div class="row">
 
                 <?php if (have_rows('team_members')): ?>
+                    <?php $counter = 2;  //this sets up the counter starting at 0 ?>
                     <?php while (have_rows('team_members')): the_row(); ?>
-                        <div class="col-lg-6 js-bio-col--target mb-2 mb-md-3 mb-lg-4">
+                        <div class="col-lg-6 js-bio-col--target js-minus  mb-2 mb-md-3 mb-lg-4 order-lg-<?php echo $counter; ?>" data-counter="<?php echo $counter; ?>">
 
                             <div class="container member-block px-0">
                                 <div class="d-flex flex-column flex-md-row no-gutters justify-content-center align-items-center">
@@ -34,6 +35,7 @@ get_header();
                             </div><!-- container -->
 
                         </div><!-- col -->
+                        <?php $counter++; // add one per row ?>
 
                     <?php endwhile; ?>
                 <?php endif; ?>

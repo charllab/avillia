@@ -1,5 +1,7 @@
 jQuery(function () {
 
+    // remove click on dropdown on mobile expand
+
     if ($(window).width() < 1440) {
 
         jQuery('li.menu-item.dropdown').click(function (event) {
@@ -16,8 +18,12 @@ jQuery(function () {
 
     // full bio click
     jQuery('.js-bio__btn').on('click', function () {
-        jQuery('.js-bio-col--target').removeClass('bio-block-expanded');
+        var bio = jQuery('.js-bio-col--target');
+        bio.removeClass('bio-block-expanded');
         jQuery(this).parents('.js-bio-col--target').toggleClass('bio-block-expanded');
+        var countposition = bio.data('counter');
+        countposition -= 2;
+        bio.addClass('order-lg-' + countposition);
     });
     // close button click
     jQuery('.js-bio__close').on('click', function () {

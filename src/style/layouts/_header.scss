@@ -1,4 +1,3 @@
-
 // had to add #menu because of clipping
 .hero-nav-overlay, #menu {
 
@@ -140,6 +139,7 @@
 
         .nav-link {
             border-radius: 0;
+
             &::before, &::after {
                 background-color: transparent !important;
             }
@@ -147,9 +147,16 @@
     }
 
     @include media-breakpoint-down(xl) {
+
+        .nav-link.dropdown-toggle {
+            &:hover {
+                color: white;
+            }
+        }
+
         .navbar-nav li.active .nav-link {
             position: relative;
-            color: lighten($secondary,15%);
+            color: lighten($secondary, 15%);
             font-weight: 500;
             text-transform: uppercase;
             font-size: 1.05rem;
@@ -175,6 +182,7 @@
 
         .dropdown.show {
             background-color: transparent;
+
             & > .nav-link {
                 color: white;
             }
@@ -215,9 +223,11 @@
                 font-size: .99rem;
                 //border-bottom: 1px solid $secondary;
             }
+
             li.active .nav-link {
                 background-color: $primary;
                 color: white !important;
+
                 &::after, &::before {
                     background-color: transparent;
                 }
@@ -288,7 +298,7 @@
         bottom: 0;
     }
 
-    @include media-breakpoint-between(md,lg) {
+    @include media-breakpoint-between(md, lg) {
         max-width: 70%;
         left: 15%;
         right: 15%;
@@ -299,6 +309,7 @@
         max-width: 812px;
     }
 }
+
 .header__entry-content {
     h1 {
         @include media-breakpoint-down(md) {
@@ -339,6 +350,7 @@
 
         color: white;
     }
+
     .dropdown-menu .nav-link {
         font-weight: 300;
 
@@ -359,6 +371,7 @@
         li.nav-item.active {
             .nav-link {
                 color: $primary !important;
+
                 &:after {
                     background-color: $primary !important;
                 }
@@ -400,6 +413,7 @@
 
         .dropdown.show {
             background-color: transparent;
+
             & > .nav-link {
                 color: $body-color;
             }
