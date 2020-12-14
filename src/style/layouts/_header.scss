@@ -108,7 +108,7 @@
             position: relative;
             color: white;
 
-            @include media-breakpoint-up(xxl) {
+            @include media-breakpoint-up(xxxl) {
                 color: $primary;
                 font-weight: 500 !important;
             }
