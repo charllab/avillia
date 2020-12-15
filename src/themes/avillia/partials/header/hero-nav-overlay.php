@@ -9,9 +9,9 @@ if (have_rows('flexible_content')):
 
             <header id="header" class="hero-nav-overlay position-relative header--full-height"
                     style="background: #247A74 url(<?php the_sub_field('background_image'); ?>) no-repeat; background-size: cover;">
-                <a href="" target="_blank" class="btn btn-light rounded-0 d-block d-md-none">
-                    Call To Action
-                </a>
+                <!--<a href="" target="_blank" class="btn btn-light rounded-0 d-block d-md-none">-->
+                <!--    Call To Action-->
+                <!--</a>-->
 
                 <div class="block__gradient-overlay position-absolute" style="z-index:1;"></div>
 
@@ -76,9 +76,9 @@ if (have_rows('flexible_content')):
         <?php elseif (get_row_layout() == 'general_header'): ?>
 
             <header id="header" class="hero-nav-overlay position-relative header--bg-clip">
-                <a href="" target="_blank" class="btn btn-light rounded-0 d-block d-md-none">
-                    Call To Action
-                </a>
+                <!--<a href="" target="_blank" class="btn btn-light rounded-0 d-block d-md-none">-->
+                <!--    Call To Action-->
+                <!--</a>-->
 
                 <div class="block__pattern-overlay position-absolute" style="z-index:1;"></div>
 
@@ -136,9 +136,9 @@ if (have_rows('flexible_content')):
 <?php else : ?>
 
     <header id="header" class="hero-nav-overlay position-relative header--bg-clip">
-        <a href="" target="_blank" class="btn btn-light rounded-0 d-block d-md-none">
-            Call To Action
-        </a>
+        <!--<a href="" target="_blank" class="btn btn-light rounded-0 d-block d-md-none">-->
+        <!--    Call To Action-->
+        <!--</a>-->
 
         <div class="block__pattern-overlay position-absolute" style="z-index:1;"></div>
 

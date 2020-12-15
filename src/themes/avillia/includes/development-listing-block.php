@@ -7,7 +7,7 @@
                          alt="<?php the_title(); ?>">
                 </a>
                 <div class="card-body">
-                    <div class="px-lg-50">
+                    <div class="px-lg-50 js-card-logo d-flex justify-content-center align-items-center">
                         <img src="<?php the_sub_field('card_logo'); ?>"
                              alt="<?php the_title(); ?> - logo" class="img-fluid d-block mb-50 mx-auto">
                     </div>
