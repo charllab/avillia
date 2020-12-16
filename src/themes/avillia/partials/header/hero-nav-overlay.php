@@ -51,7 +51,7 @@ if (have_rows('flexible_content')):
                     </div><!-- container -->
                 </nav>
 
-                <div class="container position-relative h-75 py-3 py-md-0">
+                <div class="container position-relative h-75 py-3 py-md-0" style="z-index: 3;">
                     <div class="header__entry-section d-flex justify-content-center align-items-center"
                          style="z-index:3;">
                         <div class="header__entry-content p-75 p-md-2 p-xxl-3 bg-secondary--rgba">
@@ -65,7 +65,7 @@ if (have_rows('flexible_content')):
                                 <?php if (have_rows('button')): ?>
                                     <div class="mt-1 mt-lg-2">
                                         <?php while (have_rows('button')): the_row(); ?>
-                                            <a href="<?php the_sub_field('link'); ?>" class="btn btn-light" target="_blank">
+                                            <a href="<?php the_sub_field('link'); ?>" class="btn btn-light">
                                                 <?php the_sub_field('button_label'); ?>
                                             </a>
                                         <?php endwhile; ?>
