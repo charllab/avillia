@@ -4,7 +4,7 @@ global $accom_query, $view;
 
 
 
-<section id="map-anchor" <?php echo($view == 'list' ? 'style="display: none;"' : ''); ?> class="section--map js-view-map pb-3 pb-lg-4">
+<section id="map-anchor" <?php echo($view == 'list' ? 'style="display: none;"' : ''); ?> class="section--map js-view-map pb-3 pb-lg-4 d-none d-md-block">
     <div class="container">
         <div class="row">
             <div class="col-12">

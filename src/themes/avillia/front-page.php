@@ -82,18 +82,18 @@
                     <?php if (have_rows('service_cards')): ?>
                         <?php while (have_rows('service_cards')): the_row(); ?>
                             <?php if (get_sub_field('section_link')): ?>
-                            <a href="<?php the_sub_field('section_link');?>" title="Read More">
+                                <a href="<?php the_sub_field('section_link'); ?>" title="Read More">
                             <?php endif; ?>
-                                <div class="col-12 col-md-6 col-xl service__card-wrapper mb-1">
-                                    <div class="py-1 px-50 service__card text-center h-100">
-                                        <img src="<?php the_sub_field('card_icon'); ?>"
-                                             alt="<?php the_sub_field('card_title'); ?> Icon" class="img-fluid mb-1">
-                                        <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title'); ?></h3>
-                                        <p class="text-white mb-0"><?php the_sub_field('card_text'); ?></p>
-                                    </div>
-                                </div><!-- col -->
+                            <div class="col-12 col-md-6 col-xl service__card-wrapper mb-1">
+                                <div class="py-1 px-50 service__card text-center h-100">
+                                    <img src="<?php the_sub_field('card_icon'); ?>"
+                                         alt="<?php the_sub_field('card_title'); ?> Icon" class="img-fluid mb-1">
+                                    <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title'); ?></h3>
+                                    <p class="text-white mb-0"><?php the_sub_field('card_text'); ?></p>
+                                </div>
+                            </div><!-- col -->
                             <?php if (get_sub_field('section_link')): ?>
-                            </a>
+                                </a>
                             <?php endif; ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
@@ -127,7 +127,26 @@
 
                         <?php if (have_rows('development_promo_section_1')): ?>
                             <?php while (have_rows('development_promo_section_1')): the_row(); ?>
-                                <div class="col-xl-6 js-gallery js-img-obj-fit__container">
+                                <div class="col-12 d-md-none">
+                                    <a href="<?php echo esc_url(home_url('/our-developments')); ?>"
+                                       class="development-promo promo-item text-decoration--none">
+                                        <div class="row">
+                                            <div class="col-md-6 order-md-1 mb-50">
+                                                <div
+                                                    class="d-flex h-100 flex-column justify-content-center promo-min-height"
+                                                    style="background: #254725;">
+                                                    <h2 class="w-100 text-white text-center"><?php the_sub_field('development_name_1'); ?></h2>
+                                                </div>
+                                            </div><!-- col -->
+                                        </div><!-- row-->
+                                    </a>
+                                </div><!--col  -->
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        <?php if (have_rows('development_promo_section_1')): ?>
+                            <?php while (have_rows('development_promo_section_1')): the_row(); ?>
+                                <div class="col-xl-6 js-gallery js-img-obj-fit__container d-none d-md-block">
                                     <a href="<?php echo esc_url(home_url('/our-developments')); ?>#okanaganregion"
                                        class="development-promo promo-item text-decoration--none">
                                         <div class="row">
@@ -156,7 +175,26 @@
 
                         <?php if (have_rows('development_promo_section_2')): ?>
                             <?php while (have_rows('development_promo_section_2')): the_row(); ?>
-                                <div class="col-xl-6 js-gallery js-img-obj-fit__container">
+                                <div class="col-12 d-md-none">
+                                    <a href="<?php echo esc_url(home_url('/our-developments')); ?>"
+                                       class="development-promo promo-item text-decoration--none">
+                                        <div class="row">
+                                            <div class="col-md-6 order-md-1 mb-50">
+                                                <div
+                                                    class="d-flex h-100 flex-column justify-content-center promo-min-height"
+                                                    style="background: #A0703E;">
+                                                    <h2 class="w-100 text-white text-center"><?php the_sub_field('development_name_2'); ?></h2>
+                                                </div>
+                                            </div><!-- col -->
+                                        </div><!-- row-->
+                                    </a>
+                                </div><!--col  -->
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        <?php if (have_rows('development_promo_section_2')): ?>
+                            <?php while (have_rows('development_promo_section_2')): the_row(); ?>
+                                <div class="col-xl-6 js-gallery js-img-obj-fit__container d-none d-md-block">
                                     <a href="<?php echo esc_url(home_url('/our-developments')); ?>#albertaregion"
                                        class="development-promo promo-item text-decoration--none">
                                         <div class="row">
@@ -201,7 +239,9 @@
 
             <section class="mb-2 mb-md-3">
                 <div class="container">
-                    <a href="<?php echo esc_url(home_url('/our-developments')); ?>" class="btn btn-primary gk-button--full">Explore <span class="d-none d-sm-inline">&nbsp;All&nbsp;</span> Developments</a>
+                    <a href="<?php echo esc_url(home_url('/our-developments')); ?>"
+                       class="btn btn-primary gk-button--full">Explore <span
+                            class="d-none d-sm-inline">&nbsp;All&nbsp;</span> Developments</a>
                 </div><!-- container -->
             </section><!-- button-->
 

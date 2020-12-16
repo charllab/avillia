@@ -23,7 +23,7 @@ $accom_query = new WP_Query($args);
 
 <main class="py-2 pt-lg-5">
 
-    <section id="developmentListing">
+    <section id="developmentListing" class="d-none d-md-block">
         <div class="container">
             <div class="row">
                 <div class="col-12 pb-150">
