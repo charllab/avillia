@@ -81,14 +81,20 @@
 
                     <?php if (have_rows('service_cards')): ?>
                         <?php while (have_rows('service_cards')): the_row(); ?>
-                            <div class="col-12 col-md-6 col-xl service__card-wrapper mb-1">
-                                <div class="py-1 px-50 service__card text-center h-100">
-                                    <img src="<?php the_sub_field('card_icon'); ?>"
-                                         alt="<?php the_sub_field('card_title'); ?> Icon" class="img-fluid mb-1">
-                                    <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title'); ?></h3>
-                                    <p class="text-white mb-0"><?php the_sub_field('card_text'); ?></p>
-                                </div>
-                            </div><!-- col -->
+                            <?php if (get_sub_field('section_link')): ?>
+                            <a href="<?php the_sub_field('section_link');?>" title="Read More">
+                            <?php endif; ?>
+                                <div class="col-12 col-md-6 col-xl service__card-wrapper mb-1">
+                                    <div class="py-1 px-50 service__card text-center h-100">
+                                        <img src="<?php the_sub_field('card_icon'); ?>"
+                                             alt="<?php the_sub_field('card_title'); ?> Icon" class="img-fluid mb-1">
+                                        <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title'); ?></h3>
+                                        <p class="text-white mb-0"><?php the_sub_field('card_text'); ?></p>
+                                    </div>
+                                </div><!-- col -->
+                            <?php if (get_sub_field('section_link')): ?>
+                            </a>
+                            <?php endif; ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
 
