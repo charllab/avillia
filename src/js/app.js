@@ -1,5 +1,11 @@
 jQuery(function () {
 
+    // scroll to button
+    $("#button").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#elementtoScrollToID").offset().top
+        }, 500);
+    });
 
     // make it rain
     let url = location.href.replace(/\/$/, "");

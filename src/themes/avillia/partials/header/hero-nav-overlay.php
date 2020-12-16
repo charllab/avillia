@@ -58,15 +58,31 @@ if (have_rows('flexible_content')):
                             <h1 class="text-white">
                                 <?php the_sub_field('card_title'); ?>
                             </h1>
-                            <?php if (have_rows('button')): ?>
+
+
+                            <?php if (is_front_page()) : ?>
+
+                                <?php if (have_rows('button')): ?>
+                                    <div class="mt-1 mt-lg-2">
+                                        <?php while (have_rows('button')): the_row(); ?>
+                                            <a href="<?php the_sub_field('link'); ?>" class="btn btn-light" target="_blank">
+                                                <?php the_sub_field('button_label'); ?>
+                                            </a>
+                                        <?php endwhile; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                            <?php else : ?>
+
                                 <div class="mt-1 mt-lg-2">
-                                    <?php while (have_rows('button')): the_row(); ?>
-                                        <a href="<?php the_sub_field('link'); ?>" class="btn btn-light" target="_blank">
-                                            <?php the_sub_field('button_label'); ?>
-                                        </a>
-                                    <?php endwhile; ?>
+                                    <div href="" id="button" class="btn btn-light js-scroll-down">
+                                        Read More
+                                    </div>
                                 </div>
+
                             <?php endif; ?>
+
+
                         </div><!-- header__entry-content-->
                     </div><!-- header__entry-section -->
                 </div><!-- container -->

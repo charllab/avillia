@@ -490,3 +490,17 @@
         top: -15px;
     }
 }
+
+.ghostkit-button-wrapper-inner {
+    clear: none;
+}
+
+@include media-breakpoint-up(xxl) {
+
+    .stop-left-margin {
+        .ghostkit-button {
+            margin-left: 0;
+        }
+    }
+
+}
