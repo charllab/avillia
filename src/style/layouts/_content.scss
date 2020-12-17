@@ -701,9 +701,16 @@ ul.nav.nav-tabs li {
 
 //  maps
 
+//hide map on mobile
+@include media-breakpoint-down(md) {
+    #map-anchor {
+        display: none !important;
+    }
+}
+
 
 #quarrylanding {
-    fill: red;
+    //fill: red;
 }
 #fenwyck {
     fill: cyan;
@@ -719,4 +726,8 @@ ul.nav.nav-tabs li {
 }
 #morningview {
     fill: pink;
+}
+
+.card-logo-block--min-height {
+    min-height: 174px;
 }

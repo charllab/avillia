@@ -113,17 +113,6 @@ jQuery(function () {
         jQuery(this).height(maxHeight);
     });
 
-    // equal height logos for development cards
-    var logoMaxHeight = -1;
-
-    jQuery('.js-card-logo').each(function () {
-        logoMaxHeight = logoMaxHeight > jQuery(this).height() ? logoMaxHeight : jQuery(this).height();
-    });
-
-    jQuery('.js-card-logo').each(function () {
-        jQuery(this).height(logoMaxHeight).css('min-height' , logoMaxHeight + 'px' );
-    });
-
     // js map search
 
     jQuery('.js-update-search').on('click', function (e) {
@@ -144,8 +133,6 @@ jQuery(function () {
         } else {
             jQuery('.js-view-list').hide();
             jQuery('.js-view-map').show();
-
-            map.fitBounds(bounds, 150);
         }
     });
 
