@@ -194,10 +194,10 @@ if (have_rows('flexible_content')):
             </div><!-- container -->
         </nav>
 
-        <div class="container pt-2 pt-md-3">
+        <div class="container pt-2">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">
-                    <h1 class="mb-4 text-white"><?php the_title(); ?></h1>
+                    <h1 class="mb-1 text-white"><?php the_title(); ?></h1>
                 </div>
             </div>
         </div>

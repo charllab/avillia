@@ -20,7 +20,7 @@ get_header();
 
 
                                         <div class="bio-block__profile p-1">
-                                            <h2><?php the_sub_field('full_name'); ?></h2>
+                                            <h2 class="h3"><?php the_sub_field('full_name'); ?></h2>
                                             <p class="h5"><?php the_sub_field('qualifications'); ?></p>
                                             <p class="h4 my-50"><?php the_sub_field('position'); ?></p>
                                             <button class="btn btn-primary w-100 full-bio__btn js-bio__btn">Full Bio</button>

@@ -210,6 +210,7 @@ main {
             height: 115px;
             top: -20px;
             left: -$spacer;
+            background-size: 150px;
             //border: 1px solid slateblue;
         }
 
@@ -217,7 +218,7 @@ main {
             width: 238px;
             height: 215px;
             top: -$spacer*2.3;
-            left: $spacer*2.3;
+            left: $spacer*2.8;
             //border: 1px solid olive;
         }
     }
@@ -250,19 +251,20 @@ main {
         @include media-breakpoint-up(lg) {
             //border: 1px solid firebrick;
             bottom: -$spacer*0.95;
-            right: -$spacer;
+            right: $spacer;
+            background-size: 150px;
         }
 
         @include media-breakpoint-up(xl) {
             width: 186px;
             height: 170px;
             bottom: -40px;
-            right: $spacer;
+            right: -$spacer;
         }
 
         @include media-breakpoint-up(xxl) {
             bottom: -40px;
-            right: $spacer*3.5;
+            right: $spacer*2.15;
         }
     }
 
@@ -308,13 +310,13 @@ main {
 
 .welcome-slider__item {
     background-color: #589894;
-    max-width: 470px;
+    max-width: 330px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
 
     @include media-breakpoint-up(lg) {
-        height: 470px;
+        height: 350px;
         overflow: hidden;
     }
 }
@@ -487,7 +489,7 @@ main {
 }
 
 h2.development-description {
-    font-size: 1.8rem;
+    font-size: 1.375rem;
     line-height: 1.5;
 }
 
@@ -639,7 +641,7 @@ ul.nav.nav-tabs li {
 
     @include media-breakpoint-up(md) {
         max-width: 398px;
-        width: 50%;
+        width: 40%;
     }
 }
 

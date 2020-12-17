@@ -15,7 +15,7 @@
                                         <?php if (get_sub_field('slider_sub_heading')): ?>
                                             <h4 class="h1 font-italic font-weight-normal text-white"><?php the_sub_field('slider_sub_heading'); ?></h4>
                                         <?php endif; ?>
-                                        <p class="mt-1 mt-md-2 h3 font-pop text-white font-weight-bold"><?php the_sub_field('slider_blurb'); ?></p>
+                                        <p class="mt-1 mt-md-2 h4 font-pop text-white font-weight-bold"><?php the_sub_field('slider_blurb'); ?></p>
                                     </div><!-- item -->
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -156,7 +156,7 @@
                                                 <div
                                                     class="d-flex h-100 flex-column justify-content-center promo-min-height"
                                                     style="background: #254725">
-                                                    <h2 class="w-100 text-white text-center"><?php the_sub_field('development_name_1'); ?></h2>
+                                                    <h3 class="w-100 text-white text-center"><?php the_sub_field('development_name_1'); ?></h3>
                                                 </div>
                                             </div><!-- col -->
                                             <div class="col-12 order-md-0 mb-1">
@@ -207,7 +207,7 @@
                                                             class="d-flex h-100 flex-column justify-content-center promo-min-height"
                                                             style="background: #A0703E">
 
-                                                            <h2 class="w-100 text-white text-center px-1"><?php the_sub_field('development_name_2'); ?></h2>
+                                                            <h3 class="w-100 text-white text-center px-1"><?php the_sub_field('development_name_2'); ?></h3>
 
                                                         </div><!-- flex-->
                                                     </div><!-- col -->
