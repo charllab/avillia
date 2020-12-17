@@ -114,8 +114,12 @@ main {
 
 .page, .development-template-default {
     background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
-    background-position-y: 260px;
+    background-position-y: 208px;
     background-size: 100%;
+
+    @include media-breakpoint-up(md) {
+        background-position-y: 260px;
+    }
 }
 
 
