@@ -280,7 +280,7 @@
     @include media-breakpoint-up(xxl) {
 
         height: 100vh;
-        min-height: 800px;
+        min-height: 700px;
 
         .navbar-nav .nav-link {
             color: $dark;
@@ -307,7 +307,7 @@
 
     @include media-breakpoint-up(lg) {
         right: 16px;
-        max-width: 812px;
+        max-width: 636px;
     }
 }
 

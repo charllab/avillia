@@ -114,7 +114,7 @@ main {
 
 .page, .development-template-default {
     background: #fff url('../images/pattern-drk-fade.jpg') no-repeat 0 0;
-    background-position-y: 310px;
+    background-position-y: 260px;
     background-size: 100%;
 }
 
@@ -735,4 +735,31 @@ ul.nav.nav-tabs li {
 
 .card-logo-block--min-height {
     min-height: 174px;
+}
+
+.single {
+    main {
+        p {
+            a {
+                color: $secondary !important;
+                font-weight: bold !important;
+            }
+        }
+        a {
+            color: $secondary !important;
+            font-weight: bold !important;
+        }
+
+        a.btn-primary {
+            color: white !important;
+        }
+
+        a.btn-secondary {
+            color: $secondary !important;
+        }
+    }
+}
+
+.inline-link--secondary a {
+    color: $secondary !important;
 }

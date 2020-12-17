@@ -13,7 +13,7 @@ get_header();
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-8">
                             <div class="eventsingleimg-wrapper">
-                                <a href="<?php bloginfo('url'); ?>/blog" class="inline-link--primary d-block mb-150 font-weight-bold">← Back To What's New</a>
+                                <a href="<?php bloginfo('url'); ?>/blog" class="inline-link--secondary d-block mb-150 font-weight-bold">← Back To What's New</a>
                             </div><!-- eventsingleimg-wrapper -->
                         </div><!-- col -->
                     </div><!-- row -->
@@ -28,10 +28,10 @@ get_header();
                     <div class="row justify-content-between blog-nav-single">
 
                         <div class="col-6 col-lg-4 p-50">
-                            <span class="nav-previous inline-link--primary font-weight-bold"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('&larr;', 'Previous post link', 'sproingcreative') . '</span> %title'); ?></span>
+                            <span class="nav-previous inline-link--secondary font-weight-bold"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('&larr;', 'Previous post link', 'sproingcreative') . '</span> %title'); ?></span>
                         </div><!-- col -->
                         <div class="col-6 col-lg-4 text-right d-flex justify-content-end blog-nav-single-right p-50">
-                            <span class="nav-next inline-link--primary font-weight-bold"><?php next_post_link('%link', '%title <span class="meta-nav">' . _x('&rarr;', 'Next post link', 'sproingcreative') . '</span>'); ?></span>
+                            <span class="nav-next inline-link--secondary font-weight-bold"><?php next_post_link('%link', '%title <span class="meta-nav">' . _x('&rarr;', 'Next post link', 'sproingcreative') . '</span>'); ?></span>
                         </div><!-- col -->
                     </div><!-- row -->
                 </div><!-- container -->

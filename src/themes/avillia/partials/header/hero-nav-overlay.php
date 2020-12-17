@@ -60,7 +60,7 @@ if (have_rows('flexible_content')):
                          style="z-index:3;">
 
 
-                        <div class="header__entry-content p-75 p-md-2 p-xxl-3 bg-secondary--rgba">
+                        <div class="header__entry-content p-75 p-md-2 bg-secondary--rgba">
                             <h1 class="text-white">
                                 <?php the_sub_field('card_title'); ?>
                             </h1>

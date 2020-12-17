@@ -15,7 +15,7 @@
                     <div class="max-width-550">
                         <h2 class="development-description mb-1"><?php the_field('development_description'); ?></h2>
                         <?php if (get_field('external_link')): ?>
-                        <a href="<?php the_field('external_link');?>" class="btn btn-primary" target="_blank">Community Website</a>
+                        <a href="<?php the_field('external_link');?>" class="btn btn-primary text-white" target="_blank">Community Website</a>
                         <?php endif; ?>
                     </div><!-- max-width--550 -->
                 </div><!-- col -->

@@ -30,7 +30,6 @@ get_header(); ?>
 
                     <div class="col-lg-5">
                         <div class="p-2 px-2 bg-secondary">
-                            <h2 class="h3 font-pop text-white mb-150">Get in Touch</h2>
                             <p class="small text-white" style="max-width: 655px;">
                                 <?php the_field('footer', 'options'); ?>
                             </p>
