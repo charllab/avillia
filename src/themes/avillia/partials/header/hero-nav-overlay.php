@@ -51,9 +51,15 @@ if (have_rows('flexible_content')):
                     </div><!-- container -->
                 </nav>
 
+                <?php if (is_front_page()) : ?>
                 <div class="container position-relative h-75 py-3 py-md-0" style="z-index: 3;">
+                    <?php else : ?>
+                    <div class="container position-relative h-75 pt-9 py-md-0" style="z-index: 3;">
+                    <?php endif; ?>
                     <div class="header__entry-section d-flex justify-content-center align-items-center"
                          style="z-index:3;">
+
+
                         <div class="header__entry-content p-75 p-md-2 p-xxl-3 bg-secondary--rgba">
                             <h1 class="text-white">
                                 <?php the_sub_field('card_title'); ?>

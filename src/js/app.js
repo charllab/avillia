@@ -78,6 +78,7 @@ jQuery(function () {
     // owl homepage carousel
 
     jQuery('.welcome-slider').owlCarousel({
+        margin: '10px',
         items: 1,
         center: true,
         autoplay: false,
