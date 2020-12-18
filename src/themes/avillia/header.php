@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/61d303198f.js" crossorigin="anonymous"></script>
 
     <?php wp_head(); ?>
+    <meta name="google-site-verification" content="Y9RQx9phClJrATG0K6DKq6RUwv7g-Vj5XTEmPC6eL3I" />
 </head>
 
 <body <?php body_class(); ?>>
