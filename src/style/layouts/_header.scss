@@ -1,5 +1,7 @@
 // had to add #menu because of clipping
-.hero-nav-overlay, #menu {
+.hero-nav-overlay,
+#menu,
+.outside-header {
 
     .container {
         padding: 0 36px;
@@ -421,4 +423,35 @@
         }
 
     }
+}
+
+//outside header
+
+.outside-header {
+    height: 0;
+    opacity: 0;
+    transition: all ease .5s;
+
+    @include media-breakpoint-up(xxl) {
+        .dropdown.show .nav-link.dropdown-toggle {
+            color: $dark !important;
+        }
+
+        .navbar-nav {
+            .nav-link {
+                color: $dark !important;
+
+            }
+        }
+    }
+
+}
+
+.outside-header .navbar-nav li:not(#menu-item-26).active .nav-link::after {
+    background-color: $dark !important;
+}
+
+.outside-header.sticky-top {
+    height: auto;
+    opacity: 1;
 }

@@ -1,5 +1,21 @@
 jQuery(function () {
 
+    // sticky header
+
+    var scrollVal = 200;
+
+    $(window).scroll(function() {
+        var x = $(this).scrollTop();
+        if( x > scrollVal ) {
+            $('.outside-header').addClass('sticky-top');
+        } else {
+            $('.outside-header').removeClass('sticky-top');
+        }
+
+        //scrollVal = x;
+
+    });
+
     // scroll to button
     $("#button").click(function() {
         $([document.documentElement, document.body]).animate({
