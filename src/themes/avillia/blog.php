@@ -13,6 +13,8 @@ get_header(); ?>
 
             <div class="container">
 
+                <div class="row justify-content-center align-items-center mb-2 border border-danger">
+
                 <?php
                 $limit = 6;
 
@@ -25,36 +27,27 @@ get_header(); ?>
                 while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
 
-                    <div class="row justify-content-center align-items-center mb-2">
-
-                        <div class="col-lg-6">
 
 
-                            <div class="listing-block-wrapper d-xxl-flex">
+                        <div class="col-lg-4">
 
-                                <div class="listing-block-content p-1 py-lg-0 bg-white w-100">
-
-                                    <h2 class="mb-50 mt-1"><?php the_title(); ?></h2>
-
-                                    <div class="listing-block-copy">
-
-                                        <p>
-                                            <?php echo get_excerpt(); ?>
-                                        </p>
-
-                                    </div><!-- listing-block-copy -->
-
-                                    <div class="listing-block-button">
-                                        <a href="<?php the_permalink(); ?>" class="btn btn-primary mb-1 d-md-inline-block">Read More</a>
-                                    </div><!-- listing-block-button -->
-
-                                </div><!-- listing-block-content -->
-                            </div><!-- listing-block-wrapper -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="h4 font-pop mb-35 text-info"><?php the_title(); ?></h2>
+                                    <p class="card-text"><?php echo get_excerpt(); ?></p>
+                                </div><!-- card-body -->
+                                <div class="card-footer">
+                                    <a href="<?php the_permalink(); ?>"
+                                       class="mt-auto">Read More</a>
+                                </div><!-- card-footer -->
+                            </div><!-- card -->
 
                         </div><!-- col-->
-                    </div><!-- row -->
+
 
                 <?php endwhile; ?>
+
+                </div><!-- row -->
 
 
                 <div class="row justify-content-center">
