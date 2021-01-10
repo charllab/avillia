@@ -16,16 +16,17 @@ get_header(); ?>
                 <div class="row justify-content-start align-items-start mb-2 blog--listing--row__control--padding">
 
                     <?php
-                    $limit = 2;
 
-                    $temp = $wp_query;
-                    $wp_query = null;
+                    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                    $args = array(
+                        'posts_per_page' => 3,
+                        'paged' => $paged
+                    );
 
                     $wp_query = new WP_Query();
-                    $wp_query->query('posts_per_page=' . $limit . '&paged=' . $paged);
+                    $wp_query->query($args);
 
                     while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
 
                         <div class="col-lg-6 col-xxl-4">
 
