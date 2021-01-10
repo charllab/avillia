@@ -811,3 +811,22 @@ ul.nav.nav-tabs li {
 .blog--listing__title {
     font-size: 1.375rem;
 }
+.blog--listing__title--min-height {
+
+    @include media-breakpoint-up(lg) {
+        height: 70px;
+    }
+
+}
+
+// blog card p styling
+.blog--listing__card {
+    h2.blog--listing__title + p {
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 120px;
+        }
+
+    }
+}

@@ -30,7 +30,7 @@ get_header(); ?>
 
                         <div class="col-lg-6 col-xxl-4">
 
-                            <div class="card blog--listing__card rounded-0 border-0">
+                            <div class="card blog--listing__card rounded-0 border-0 mb-1">
 
                                 <?php if (has_post_thumbnail()) : ?>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"
@@ -66,10 +66,10 @@ get_header(); ?>
                                     </div><!-- row-->
 
 
-                                    <h2 class="blog--listing__title font-pop mb-35 text-info"><?php the_title(); ?></h2>
-                                    <p class="card-text"><?php echo get_excerpt(); ?></p>
+                                    <h2 class="blog--listing__title blog--listing__title--min-height font-pop mb-35 text-info"><?php the_title(); ?></h2>
+                                    <?php echo get_excerpt(140); ?>
                                 </div><!-- card-body -->
-                                <div class="card-footer border-0">
+                                <div class="card-footer border-0 bg-white">
                                     <a href="<?php the_permalink(); ?>"
                                        class="mt-auto">Read More</a>
                                 </div><!-- card-footer -->
