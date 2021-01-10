@@ -50,10 +50,10 @@ get_header(); ?>
                                     </a>
                                 <?php endif; ?>
 
-                                <div class="card-body border-0">
+                                <div class="card-body border-0 pb-0">
 
                                     <div class="row mx-0 mb-1">
-                                        <div class="col-md-6 px-0">
+                                        <div class="col-md-6 px-0 text-primary">
 
                                             <?php $category = get_the_category();
                                             echo $category[0]->cat_name;
