@@ -2,7 +2,7 @@
 
 // remove default border on inputs
 
-body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text], body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=email], body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=tel], body #gform_wrapper_1 .gform_body .gform_fields .gfield textarea {
+body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=text], body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=email], body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=tel], body #gform_wrapper_2 .gform_body .gform_fields .gfield textarea {
     box-shadow: none;
     border-color: transparent;
 }
@@ -282,10 +282,10 @@ label.listing-page-sidemenu__label {
 }
 
 // text-area border
-body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text],
-body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=email],
-body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=tel],
-body #gform_wrapper_1 .gform_body .gform_fields .gfield textarea {border: 1px solid #bfbfbf}
+body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=text],
+body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=email],
+body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=tel],
+body #gform_wrapper_2 .gform_body .gform_fields .gfield textarea {border: 1px solid #bfbfbf}
 
 // thank you message
 
@@ -398,7 +398,7 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 
 //captcha mobile fix
 @media (max-width: 361.98px) {
-    #gform_wrapper_1 div.ginput_recaptcha {
+    #gform_wrapper_2 div.ginput_recaptcha {
         -ms-transform: scale(.8);
         transform: scale(.8);
         -webkit-transform: scale(.8);
@@ -414,14 +414,14 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message 
 }
 
 // custom override for general footer form
-#gform_wrapper_1,
-body #gform_wrapper_1 .gform_body {
+#gform_wrapper_2,
+body #gform_wrapper_2 .gform_body {
     padding: 0;
     margin: 0;
 }
 
 // style all inputs wrapping li's
-body #gform_wrapper_1 ul li.gfield {
+body #gform_wrapper_2 ul li.gfield {
     margin-top: $spacer*.75;
     &:first-of-type {
         margin-top: 0;
@@ -429,20 +429,20 @@ body #gform_wrapper_1 ul li.gfield {
 }
 
 // style text inputs
-body #gform_wrapper_1 .gform_body .gform_fields .gfield input[type=text] {
+body #gform_wrapper_2 .gform_body .gform_fields .gfield input[type=text] {
     margin-top: 0;
     margin-bottom: 0;
     -webkit-appearance: none;
 }
 
 // style textarea
-body #gform_wrapper_1 .gform_body .gform_fields .gfield textarea {
+body #gform_wrapper_2 .gform_body .gform_fields .gfield textarea {
     height: 170px;
     -webkit-appearance: none;
 }
 
 // style error top message
-body #gform_wrapper_1 .validation_error {
+body #gform_wrapper_2 .validation_error {
     background: red;
     color: white;
     border: 1px solid white;
@@ -451,14 +451,14 @@ body #gform_wrapper_1 .validation_error {
 }
 
 // style submit button
-body #gform_wrapper_1 .gform_footer input[type=submit] {
+body #gform_wrapper_2 .gform_footer input[type=submit] {
     border-radius: 0;
     background-color: white;
     color: $secondary;
 }
 
 // error wrapper
-body #gform_wrapper_1 .gform_body .gform_fields .gfield_error {
+body #gform_wrapper_2 .gform_body .gform_fields .gfield_error {
     border: none;
     background: red;
     margin: 0;
@@ -466,7 +466,7 @@ body #gform_wrapper_1 .gform_body .gform_fields .gfield_error {
 }
 
 // validation message
-body #gform_wrapper_1 .gform_body .gform_fields .gfield_error .validation_message {
+body #gform_wrapper_2 .gform_body .gform_fields .gfield_error .validation_message {
     border: none;
     color: white;
     line-height: 1.5;
@@ -475,7 +475,7 @@ body #gform_wrapper_1 .gform_body .gform_fields .gfield_error .validation_messag
     padding-left: 8px;
 }
 
-#gform_wrapper_1 {
+#gform_wrapper_2 {
     #validation_message_1_4 {
         padding-top: 0 !important;
         //border: 1px solid green;
@@ -483,7 +483,7 @@ body #gform_wrapper_1 .gform_body .gform_fields .gfield_error .validation_messag
 }
 
 // footer styling
-body #gform_wrapper_1 .gform_footer {
+body #gform_wrapper_2 .gform_footer {
     padding: 0;
     margin: 0;
     margin-top: $spacer;
@@ -491,7 +491,7 @@ body #gform_wrapper_1 .gform_footer {
 
 // contact page submit button override
 
-body.page-id-23 #gform_wrapper_1 .gform_footer input[type=submit] {
+body.page-id-23 #gform_wrapper_2 .gform_footer input[type=submit] {
     border-radius: 0;
     background-color: $secondary;
     color: white;
