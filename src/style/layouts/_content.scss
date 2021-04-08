@@ -16,7 +16,8 @@ main {
 .block__gradient-overlay {
     top: 0;
     left: 0;
-    width: 100%;
+    //Comment this line out to get a darker gradient effect to background
+    //width: 100%;
     height: 100%;
     z-index: 1;
     background: rgb(255, 255, 255);
@@ -827,5 +828,20 @@ ul.nav.nav-tabs li {
             min-height: 108px;
         }
 
+    }
+}
+.js-bio-col--target {
+    &:last-of-type{
+        position: relative;
+       &:after {
+           z-index: 2;
+           content: '';
+           position: absolute;
+           width: 100%;
+           height: 30px;
+           background: transparent url(../images/page-decrotive.svg) no-repeat center;
+           top: -50px;
+           right: 15px;
+       }
     }
 }

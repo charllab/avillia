@@ -18,10 +18,7 @@ get_header();
                                         <img src="<?php the_sub_field('photo'); ?>"
                                              alt="<?php the_sub_field('full_name'); ?> Icon" class="img-fluid bio-block__img">
 
-        <?php if  (the_sub_field('full_name') == 'kiwi'):
-            $msg = '<p>I am Kiwi</p>';
-            var_dump($msg);
-            ?>
+
                                         <div class="bio-block__profile p-1">
                                             <h2 class="h3"><?php the_sub_field('full_name'); ?></h2>
                                             <p class="h5"><?php the_sub_field('qualifications'); ?></p>

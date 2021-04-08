@@ -496,3 +496,9 @@ body.page-id-23 #gform_wrapper_2 .gform_footer input[type=submit] {
     background-color: $secondary;
     color: white;
 }
+
+//Change Gravity Forms checkbox text color
+body footer #gform_wrapper_2 ul li.gfield {
+    margin-top: 1.21875rem;
+    color: white;
+}
