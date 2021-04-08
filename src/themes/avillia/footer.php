@@ -13,7 +13,7 @@
                     <table>
                         <tr>
                             <td class="align-text-top">
-                                <p class="small text-white">Address: </p>
+                                <p class="small text-white"> </p>
                             </td>
                             <td class="align-text-top">
                                 <p class="small text-white"><?php the_field('address', 'options'); ?></p>
@@ -21,11 +21,15 @@
                         </tr>
                     </table>
                     <p class="small text-white">
-                        Phone: <a class="text-white"
+                       <a class="text-white"
                                   href="tel:+1<?php echo strip_tel(get_field('phone', 'options')); ?>">+1 <?php the_field('phone', 'options'); ?></a>
                     </p>
                     <p class="small text-white">
-                        Email: <a class="text-white"
+                        <a class="text-white"
+                           href="tel:+1<?php echo strip_tel(get_field('alternate_phone_number', 'options')); ?>">+1 <?php the_field('alternate_phone_number', 'options'); ?></a>
+                    </p>
+                    <p class="small text-white">
+                       <a class="text-white"
                                   href="mailto:<?php the_field('email', 'options') ?>"
                                   target="_blank"><?php the_field('email', 'options') ?></a>
                     </p>

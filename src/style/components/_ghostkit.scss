@@ -4,6 +4,7 @@
     @extend .btn;
     @extend .btn-primary;
     margin-bottom: $spacer;
+    padding: 40px;
 }
 
 // override ghost-kit col for ipad
@@ -503,4 +504,9 @@
         }
     }
 
+}
+//Change Gravity Forms checkbox text color
+body #gform_wrapper_2 ul li.gfield {
+    margin-top: 1.21875rem;
+    /*color: white;*/
 }
