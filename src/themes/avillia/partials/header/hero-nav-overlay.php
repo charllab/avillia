@@ -88,7 +88,7 @@ if (have_rows('flexible_content')):
                 </nav>
 
                 <?php if (is_front_page()) : ?>
-                <div class="container position-relative h-75 py-3 py-md-0" style="z-index: 3;">
+                <div class="container position-relative h-75 py-3 py-md-0" style="z-index: 3; padding-top: 12rem !important;">
                     <?php else : ?>
                     <div class="container position-relative h-75 pt-9 py-md-0" style="z-index: 3;">
                         <?php endif; ?>
@@ -105,7 +105,7 @@ if (have_rows('flexible_content')):
                                 <?php if (is_front_page()) : ?>
 
                                     <?php if (have_rows('button')): ?>
-                                        <div class="mt-1 mt-lg-2">
+                                        <div class="mt-1 mt-lg-2 d-none d-md-block">
                                             <?php while (have_rows('button')): the_row(); ?>
                                                 <a href="<?php the_sub_field('link'); ?>" class="btn btn-light">
                                                     <?php the_sub_field('button_label'); ?>
