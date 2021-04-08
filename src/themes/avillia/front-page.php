@@ -86,7 +86,7 @@
                                 <?php if (get_sub_field('section_link')): ?>
                                 <a href="<?php the_sub_field('section_link'); ?>" title="Read More" class="text-decoration--none">
                                     <?php endif; ?>
-                                    <div class="py-1 px-50 service__card text-center h-100">
+                                    <div class="py-1 px-50 service__card text-center h-100" style="background-color: <?php echo the_sub_field('card_color'); ?>">
                                         <img src="<?php the_sub_field('card_icon'); ?>"
                                              alt="<?php the_sub_field('card_title'); ?> Icon" class="img-fluid mb-1">
                                         <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title'); ?></h3>
