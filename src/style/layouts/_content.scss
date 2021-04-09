@@ -830,18 +830,3 @@ ul.nav.nav-tabs li {
 
     }
 }
-.js-bio-col--target {
-    &:last-of-type{
-        position: relative;
-       &:after {
-           z-index: 2;
-           content: '';
-           position: absolute;
-           width: 100%;
-           height: 30px;
-           background: transparent url(../images/page-decrotive.svg) no-repeat center;
-           top: -50px;
-           right: 15px;
-       }
-    }
-}
