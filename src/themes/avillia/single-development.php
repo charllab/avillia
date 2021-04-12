@@ -14,8 +14,15 @@
                 <div class="col-lg-6">
                     <div class="max-width-550">
                         <h2 class="development-description mb-1"><?php the_field('development_description'); ?></h2>
-                        <?php if (get_field('external_link')): ?>
-                        <a href="<?php the_field('external_link');?>" class="btn btn-primary text-white" target="_blank"><?php echo get_field('card_button_text')? get_field('card_button_text') : 'Community Website'; ?></a>
+                        <?php if (get_field('external_link')):
+                            $listing_card = get_field('development_listing_card');
+                            if ($listing_card['card_button_text']) {
+                                $card_button_text = $listing_card['card_button_text'];
+                            } else {
+                                $card_button_text = "Community Website";
+                            }
+                            ?>
+                        <a href="<?php the_field('external_link');?>" class="btn btn-primary text-white" target="_blank"><?php echo $card_button_text; ?></a>
                         <?php endif; ?>
                     </div><!-- max-width--550 -->
                 </div><!-- col -->
