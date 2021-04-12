@@ -106,5 +106,45 @@ if (have_rows('bottom_addition')):
     </div><!-- container -->
 </section><!-- button-->
 
+<!-- What we do module -->
+<section class="what-we-do py-3 pb-md-150 bg-soft">
+    <div class="container">
+        <div class="row justify-content-center mb-50">
+            <div class="col-lg-5">
+                <h2 class="h1 text-center mb-1">
+                    <?php the_field('section_heading', '2'); ?>
+                </h2>
+                <p class="text-center">
+                    <?php the_field('section_intro', '2'); ?>
+                </p>
+            </div><!-- col -->
+        </div><!-- row -->
+        <div class="row justify-content-center">
+
+            <?php if (have_rows('service_cards', '2')): ?>
+                <?php while (have_rows('service_cards', '2')): the_row(); ?>
+
+                    <div class="col-12 col-md-6 col-xl service__card-wrapper mb-1">
+                        <?php if (get_sub_field('section_link')): ?>
+                        <a href="<?php the_sub_field('section_link'); ?>" title="Read More" class="text-decoration--none">
+                            <?php endif; ?>
+                            <div class="py-1 px-50 service__card text-center h-100" style="background-color: <?php echo the_sub_field('card_color'); ?>">
+                                <img src="<?php the_sub_field('card_icon'); ?>"
+                                     alt="<?php the_sub_field('card_title'); ?> Icon" class="img-fluid mb-1">
+                                <h3 class="h5 font-pop mb-1 text-white"><?php the_sub_field('card_title'); ?></h3>
+                                <p class="text-white mb-0"><?php the_sub_field('card_text'); ?></p>
+                            </div>
+                            <?php if (get_sub_field('section_link')): ?>
+                        </a>
+                    <?php endif; ?>
+                    </div><!-- col -->
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+        </div><!-- row -->
+    </div><!-- container -->
+
+</section><!-- what-we-do -->
 
 <?php get_footer(); ?>
