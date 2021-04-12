@@ -97,7 +97,7 @@ jQuery(function () {
         margin: '10px',
         items: 1,
         center: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1000,
         autoplayTimeout: 8000,
         loop: true,
