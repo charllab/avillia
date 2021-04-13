@@ -497,8 +497,15 @@ body.page-id-23 #gform_wrapper_2 .gform_footer input[type=submit] {
     color: white;
 }
 
-//Change Gravity Forms checkbox text color
+//Change Gravity Forms dropdown text color
 body footer #gform_wrapper_2 ul li.gfield {
     margin-top: 1.21875rem;
     color: white;
+}
+
+//Sets the color for the dropdown border
+select#input_2_7 {
+    border: 1px solid #bfbfbf;
+    width: 100%;
+    padding: 10px !important;
 }
