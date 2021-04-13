@@ -819,6 +819,11 @@ ul.nav.nav-tabs li {
 
 }
 
+//Added visual seperation between type and geo categories
+a#okanaganregion-tab {
+    border-left: 1px solid #3c8782;
+}
+
 // blog card p styling
 .blog--listing__card {
     h2.blog--listing__title + p {
@@ -829,23 +834,4 @@ ul.nav.nav-tabs li {
 
     }
 }
-.js-bio-col--target {
-    &:last-of-type{
-        position: relative;
-       &:after {
-           z-index: 2;
-           content: '';
-           position: absolute;
-           width: 100%;
-           height: 30px;
-           background: transparent url(../images/page-decrotive.svg) no-repeat center;
-           top: -50px;
-           right: 15px;
-       }
-    }
-}
 
-//Added visual seperation between type and geo categories
-a#okanaganregion-tab {
-    border-left: 1px solid #3c8782;
-}
