@@ -378,6 +378,11 @@ $accom_query = new WP_Query($args);
 
         </div><!-- tab-pane fade -->
 
+        <?php if (have_rows('subscribe')) :?>
+            <?php while (have_rows('subscribe')) : the_row();?>
+                <a href="<?php the_sub_field('subscribe_link');?>" target="_blank" class="btn btn-primary gk-button--full"><?php the_sub_field('subscribe_text');?></a>
+            <?php endwhile;?>
+        <?php endif;?>
 
     </div><!-- tab-content -->
 
