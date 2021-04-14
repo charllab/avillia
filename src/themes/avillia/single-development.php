@@ -100,6 +100,27 @@ if (have_rows('bottom_addition')):
     <?php endwhile; ?>
 <?php endif; ?>
 
+<!-- Slider Photos -->
+<?php
+$photos = get_field('development_photos');
+if ($photos):
+?>
+<div class="container mb-3 position-relative project-slider-container">
+    <div class="project-slider">
+        <?php
+        foreach ($photos as $photo):
+            ?>
+            <div class="item">
+                <img class="img-fluid" src="<?php echo $photo['photo']['url']; ?>" alt="">
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <i class="fas fa-chevron-left sliderArrowLeft"></i>
+    <i class="fas fa-chevron-right sliderArrowRight"></i>
+</div>
+<?php endif; ?>
+<!-- End Slider Photos -->
+
 <section class="mb-2 mb-md-3">
     <div class="container">
         <a href="<?php echo esc_url(home_url('/our-developments')); ?>" class="btn btn-primary gk-button--full">Explore <span class="d-none d-sm-inline">&nbsp;All&nbsp;</span> Developments</a>

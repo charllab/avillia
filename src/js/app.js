@@ -183,6 +183,23 @@ jQuery(function () {
             scrollTop: jQuery(this.hash).offset().top
         }, 1000);
     });
+
+    // Project Image Slider
+    // $('.project-slider').owlCarousel({
+    //     loop:true,
+    //     margin:10,
+    //     nav:true,
+    //     center:true,
+    //     items:1
+    // });
+
+    var projectSlider = tns({
+        container: '.project-slider',
+        items: 1,
+        slideBy: 'page',
+        "prevButton": ".sliderArrowLeft",
+        "nextButton": ".sliderArrowRight"
+    });
 });
 
 var trackEvent = function (name, options) {

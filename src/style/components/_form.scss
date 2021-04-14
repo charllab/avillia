@@ -103,21 +103,18 @@ body .gform_wrapper .gform_body .gform_fields .gfield select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    border-radius: 0;
+    margin-left: 0 !important;
 }
 
 // add dropdown custom arrow + positioning
 
 .ginput_container.ginput_container_select {
     position: relative;
-
-    &:after {
-        content: '▾';
-        position: absolute;
-        top: 2px;
-        bottom: 0;
-        right: 10px;
-        z-index: 9999;
-    }
+}
+#field_2_7 label {
+    display: none;
 }
 
 // textarea styling

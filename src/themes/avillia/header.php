@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/61d303198f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
     <?php wp_head(); ?>
     <meta name="google-site-verification" content="Y9RQx9phClJrATG0K6DKq6RUwv7g-Vj5XTEmPC6eL3I" />

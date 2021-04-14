@@ -834,3 +834,46 @@ a#okanaganregion-tab {
 
     }
 }
+
+.project-slider-container {
+    .tns-nav {
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+
+        button {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 100%;
+            border: none;
+            background-color: lighten($primary, 50%);
+            margin: 0.3rem;
+
+            &.tns-nav-active {
+                background-color: $primary;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+.sliderArrowRight, .sliderArrowLeft {
+    position: absolute;
+    color: $primary;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    //padding: 1rem;
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+.sliderArrowRight {
+    right: 0;
+}
+.sliderArrowLeft {
+    left: 0;
+}
