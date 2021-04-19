@@ -4,8 +4,6 @@
     @extend .btn;
     @extend .btn-primary;
     margin-bottom: $spacer;
-    //added padding to make button more prevalent
-    padding: 50px;
 }
 
 // override ghost-kit col for ipad

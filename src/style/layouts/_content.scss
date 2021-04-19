@@ -314,13 +314,13 @@ main {
 
 .welcome-slider__item {
     background-color: #589894;
-    max-width: 330px;
+    max-width: 365px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
 
     @include media-breakpoint-up(lg) {
-        height: 350px;
+        height: 420px;
         overflow: hidden;
     }
 }
