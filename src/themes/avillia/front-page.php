@@ -14,6 +14,7 @@
                                         <h3 class="h1 text-white"><?php the_sub_field('slider_title'); ?></h3>
                                         <?php if (get_sub_field('slider_sub_heading')): ?>
                                             <h4 class="h2 font-italic font-weight-normal text-white"><?php the_sub_field('slider_sub_heading'); ?></h4>
+                                            <h5 class="h2 font-italic font-weight-normal text-white"><?php the_sub_field('slider_class'); ?></h5>
                                         <?php endif; ?>
                                         <p class="mt-1 mt-md-2 h4 font-pop text-white font-weight-bold"><?php the_sub_field('slider_blurb'); ?></p>
                                     </div><!-- item -->
