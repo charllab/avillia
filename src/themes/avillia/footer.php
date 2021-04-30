@@ -2,59 +2,57 @@
 
     <?php if (!is_page([23])) : ?>
 
-    <section class="bg-gradient--angled py-150 pt-lg-3 pb-lg-150">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <h2 class="h3 font-pop text-white mb-150">Get in Touch</h2>
-                    <p class="small text-white" style="max-width: 655px;">
-                        <?php the_field('footer', 'options'); ?>
-                    </p>
-                    <table>
-                        <tr>
-                            <td class="align-text-top">
-                                <p class="small text-white"> </p>
-                            </td>
-                            <td class="align-text-top">
-                                <p class="small text-white"><?php the_field('address', 'options'); ?></p>
-                            </td>
-                        </tr>
-                    </table>
-                    <p class="small text-white">
-                       <a class="text-white"
-                                  href="tel:+1<?php echo strip_tel(get_field('phone', 'options')); ?>">+1 <?php the_field('phone', 'options'); ?></a>
-                    </p>
-                    <p class="small text-white">
-                        <a class="text-white"
-                           href="tel:+1<?php echo strip_tel(get_field('alternate_phone_number', 'options')); ?>">+1 <?php the_field('alternate_phone_number', 'options'); ?></a>
-                    </p>
-                    <p class="small text-white">
-                       <a class="text-white"
-                                  href="mailto:<?php the_field('email', 'options') ?>"
-                                  target="_blank"><?php the_field('email', 'options') ?></a>
-                    </p>
-                    <p class="small text-white mb-50">
-                        Fax: <a class="text-white"
-                                  href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>">+1 <?php the_field('fax', 'options'); ?></a>
-                    </p>
+        <section class="bg-gradient--angled py-150 pt-lg-3 pb-lg-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <h2 class="h3 font-pop text-white mb-150">Get in Touch</h2>
+                        <p class="small text-white" style="max-width: 655px;">
+                            <?php the_field('footer', 'options'); ?>
+                        </p>
+                        <table>
+                            <tr>
+                                <td class="align-text-top">
+                                    <p class="small text-white"> </p>
+                                </td>
+                                <td class="align-text-top">
+                                    <p class="small text-white"><?php the_field('address', 'options'); ?></p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="small text-white">
+                            <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('phone', 'options')); ?>">+1 <?php the_field('phone', 'options'); ?></a>
+                            <br />
+                            <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('alternate_phone_number', 'options')); ?>">1-833-AVI-LLIA (284-5542)</a>
+                            <br />
+                            Fax: <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>">+1 <?php the_field('fax', 'options'); ?></a>
+                            <br />
+                            <a class="text-white" href="mailto:<?php the_field('email', 'options') ?>" target="_blank"><?php the_field('email', 'options') ?></a>
+                        </p>
+                        <!--<p class="small text-white">
+                            <a class="text-white" href="mailto:<?php the_field('email', 'options') ?>" target="_blank"><?php the_field('email', 'options') ?></a>
+                        </p>
+                        <p class="small text-white mb-50">
+                            Fax: <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>">+1 <?php the_field('fax', 'options'); ?></a>
+                        </p> -->
 
-                    <div class="social-links mb-150 mb-xl-0">
-                        <?php while( have_rows('social_links', 'options') ): the_row(); ?>
-                            <a class="social-link btn btn-link text-white px-0 mr-50" target="_blank" href="<?php the_sub_field('url'); ?>">
-                                <i class="<?php the_sub_field('icon_class'); ?> fa-2x">
-                                    <span class="sr-only"><?php the_sub_field('label'); ?></span>
-                                </i>
-                            </a>
-                        <?php endwhile; ?>
+                        <div class="social-links mb-150 mb-xl-0">
+                            <?php while (have_rows('social_links', 'options')) : the_row(); ?>
+                                <a class="social-link btn btn-link text-white px-0 mr-50" target="_blank" href="<?php the_sub_field('url'); ?>">
+                                    <i class="<?php the_sub_field('icon_class'); ?> fa-2x">
+                                        <span class="sr-only"><?php the_sub_field('label'); ?></span>
+                                    </i>
+                                </a>
+                            <?php endwhile; ?>
+                        </div>
+
                     </div>
-
-                </div>
-                <div class="col-xl-6">
-                    <?php echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]'); ?>
+                    <div class="col-xl-6">
+                        <?php echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]'); ?>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <?php endif; ?>
 
