@@ -24,11 +24,12 @@
                             ?>
                         <a href="<?php the_field('external_link');?>" class="btn btn-primary text-white" target="_blank"><?php echo $card_button_text; ?></a>
                         <?php endif; ?>
-                        <?php if (have_rows('subscribe')) :?>
-                            <?php while (have_rows('subscribe')) : the_row();?>
-                                <a href="<?php the_sub_field('subscribe_link');?>" target="_blank" class="btn btn-primary"><?php the_sub_field('subscribe_text');?></a>
-                            <?php endwhile;?>
-                        <?php endif;?>
+
+                        <?php
+                        $subscribe = get_field('subscribe');
+                        if (strlen($subscribe['subscribe_text'])): ?>
+                            <a href="<?php echo $subscribe['subscribe_link'];?>" target="_blank" class="btn btn-primary"><?php echo $subscribe['subscribe_text'];?></a>
+                        <?php endif; ?>
                     </div><!-- max-width--550 -->
                 </div><!-- col -->
             </div><!-- row-->
