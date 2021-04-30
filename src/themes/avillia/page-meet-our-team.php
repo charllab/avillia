@@ -44,7 +44,7 @@ get_header();
                 <?php endif; ?>
             </div><!-- row -->
 
-            <hr>
+            <hr class="mb-2 mb-md-3 mb-lg-4 mt-0">
             <div class="row">
                 <?php if (have_rows('team_members')): ?>
                     <?php $counter = 2;  //this sets up the counter starting at 0 ?>

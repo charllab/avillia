@@ -837,6 +837,17 @@ a#okanaganregion-tab {
 }
 
 .project-slider-container {
+    max-width: 1000px !important;
+    .tns-item {
+        padding: 4px;
+
+        img {
+            padding: 29px;
+            box-shadow: 0px 3px 6px #00000029;
+        }
+    }
+
+
     .tns-nav {
         bottom: -2.5rem;
         left: 50%;
