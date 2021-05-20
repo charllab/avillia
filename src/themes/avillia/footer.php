@@ -21,11 +21,11 @@
                             </tr>
                         </table>
                         <p class="small text-white">
-                            <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('phone', 'options')); ?>">+1 <?php the_field('phone', 'options'); ?></a>
+                            <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('phone', 'options')); ?>"><?php the_field('phone', 'options'); ?></a>
                             <br />
-                            <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('alternate_phone_number', 'options')); ?>">1-833-AVI-LLIA (284-5542)</a>
+                            <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('alternate_phone_number', 'options')); ?>">1-833-AVILLIA (284-5542)</a>
                             <br />
-                            Fax: <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>">+1 <?php the_field('fax', 'options'); ?></a>
+                            Fax: <a class="text-white" href="tel:+1<?php echo strip_tel(get_field('fax', 'options')); ?>"><?php the_field('fax', 'options'); ?></a>
                             <br />
                             <a class="text-white" href="mailto:<?php the_field('email', 'options') ?>" target="_blank"><?php the_field('email', 'options') ?></a>
                         </p>

@@ -162,4 +162,3 @@ $excerpt = '<p>'.$excerpt.'… </p>';
 
 return $excerpt;
 }
-
