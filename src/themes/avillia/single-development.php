@@ -22,7 +22,7 @@
                                 $card_button_text = "Community Website";
                             }
                             ?>
-                        <a href="<?php the_field('external_link');?>" class="btn btn-primary text-white" target="_blank"><?php echo $card_button_text; ?></a>
+                        <a href="<?php echo $listing_card['card_button_link']['url'];?>" class="btn btn-primary text-white" target="_blank"><?php echo $card_button_text; ?></a>
                         <?php endif; ?>
 
                         <?php
