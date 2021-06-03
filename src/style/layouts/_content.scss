@@ -399,39 +399,6 @@ main {
             min-height: 400px;
         }
     }
-
-
-    //&:nth-of-type(5n+1) {
-    //    .service__card {
-    //        background-color: #247A74;
-    //    }
-    //
-    //}
-    //
-    //&:nth-of-type(5n+2) {
-    //    .service__card {
-    //        background-color: #A0703E;
-    //    }
-    //}
-    //
-    //&:nth-of-type(5n+3) {
-    //    .service__card {
-    //        background-color: #553211;
-    //    }
-    //}
-    //
-    //&:nth-of-type(5n+4) {
-    //    .service__card {
-    //        background-color: #254725;
-    //    }
-    //}
-    //
-    //&:nth-of-type(5n+5) {
-    //    .service__card {
-    //        background-color: #302040;
-    //    }
-    //}
-
 }
 
 // homepage our development section
@@ -888,4 +855,15 @@ a#okanaganregion-tab {
 }
 .sliderArrowLeft {
     left: 0;
+}
+
+// What we do page
+h1 {
+    display: inline-flex;
+    align-items: center;
+    img {
+        max-width: 4rem;
+        margin-right: 1rem;
+        height: 5rem;
+    }
 }
