@@ -4,7 +4,7 @@
 
             <div class="nav-logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php bloginfo('template_url'); ?>/images/logo.svg"
+                    <img src="<?php bloginfo('template_url'); ?>/images/logo-new.svg"
                          alt="<?php bloginfo('name'); ?> - Logo"
                          class="img-fluid">
                     <span class="sr-only"><?php bloginfo('name'); ?></span>
