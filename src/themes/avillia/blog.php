@@ -44,7 +44,7 @@ get_header(); ?>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"
                                        class="border-o">
                                         <div
-                                            style="background-image: url(<?php bloginfo('template_url'); ?>/images/logo.svg);"
+                                            style="background-image: url(<?php bloginfo('template_url'); ?>/images/logo-new.svg);"
                                             class="blog--listing__thumbnail blog--listing__thumbnail--fallback d-block">
                                         </div>
                                     </a>
